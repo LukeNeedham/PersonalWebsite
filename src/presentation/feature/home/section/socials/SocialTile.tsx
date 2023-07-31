@@ -8,16 +8,16 @@ interface Props {
 
 export function SocialTile(props: Props) {
 	return (
-		<Clickable 
-			as="div" 
+		<Clickable
 			onClick={ () => props.onClick() }
-			cursor='pointer'
+			w='100%'
 		>
 			<Flex 
 				direction='row' 
+				w='100%'
 				backgroundColor={props.data.backgroundColor}
 			 	borderRadius='20px'
-			 	paddingY='30px'
+			 	paddingY='20px'
 			 	paddingX='30px'
 			>
 				<Image
@@ -34,9 +34,11 @@ export function SocialTile(props: Props) {
 						{props.data.description}
 					</Text>
 					<Box h='5px' />
+					{ /* The url can be quite long, it needs to be wrappable */ }
 					<Text 
 						textStyle={'fine'} 
 						color={props.data.foregroundColor}
+						overflowWrap='anywhere'
 					>
 						{props.data.url}
 					</Text>

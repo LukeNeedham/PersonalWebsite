@@ -11,17 +11,17 @@ const textStyles = {
     },
     subTitle: {
         fontWeight: 700,
-        fontSize: {base: '50px'},
+        fontSize: {base: '45px'},
         margin: '0px',
     },
     body: {
         fontWeight: 300,
-        fontSize: {base: '30px'},
+        fontSize: {base: '25px'},
         margin: '0px',
     },
     fine: {
         fontWeight: 300,
-        fontSize: {base: '18px'},
+        fontSize: {base: '20px'},
         margin: '0px',
     },
 }

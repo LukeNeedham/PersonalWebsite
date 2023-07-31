@@ -3,7 +3,8 @@ import { WelcomeSection } from 'presentation/feature/home/section/welcome/Welcom
 import { AboutSection } from 'presentation/feature/home/section/about/AboutSection'
 import { SocialsSection } from 'presentation/feature/home/section/socials/SocialsSection'
 import { ProjectsSection } from 'presentation/feature/home/section/projects/ProjectsSection'
-import { openInNewTab } from 'presentation/util/Window'
+import { openInCurrentTab, openInNewTab } from 'presentation/util/Window'
+import { UrlProvider } from 'domain/provider/UrlProvider'
 
 export function HomePage() {
   const betweenSectionSpace = '250px'
@@ -11,15 +12,16 @@ export function HomePage() {
     <Center w='100%'>
       <Flex direction={'column'} w='80%'>
         <Box h='60px'/>
-        <WelcomeSection/>
+        <WelcomeSection anchor={UrlProvider.anchor.welcome} openSection={openInCurrentTab}/>
         <Box h='150px'/>
-        <AboutSection/>
+        <AboutSection anchor={UrlProvider.anchor.about}/>
         <Box h={betweenSectionSpace}/>
         <SocialsSection 
-          onTileClick={ (url) => openInNewTab(url) }
+          onTileClick={openInNewTab}
+          anchor={UrlProvider.anchor.socials}
         />
         <Box h={betweenSectionSpace} />
-        <ProjectsSection/>
+        <ProjectsSection openProject={openInNewTab} anchor={UrlProvider.anchor.projects} />
         <Box h={betweenSectionSpace} />
       </Flex>
     </Center>

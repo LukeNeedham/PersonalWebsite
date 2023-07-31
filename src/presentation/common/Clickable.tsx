@@ -3,5 +3,5 @@ import { chakra } from "@chakra-ui/react"
 
 export const Clickable = (props) => {
   const clickable = useClickable(props)
-  return <chakra.button display="inline-flex" {...clickable} />
+  return <chakra.div cursor='pointer' display="inline-flex" {...clickable} />
 }

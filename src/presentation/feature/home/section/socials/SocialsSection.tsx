@@ -5,6 +5,7 @@ import { getAbsoluteSocialUrl } from 'domain/model/SocialTileData'
 
 interface Props {
 	onTileClick: (url: string) => void
+	anchor: string
 }
 
 export function SocialsSection(props: Props) {
@@ -17,9 +18,9 @@ export function SocialsSection(props: Props) {
     })
 
 	return (
-      <Flex direction={'column'}>
+      <Flex direction={'column'} id={props.anchor}>
       	<Center>
-	      	<Text textStyle={'mainTitle'}>
+	      	<Text textStyle={'mainTitle'} textAlign='center'>
 	      		Where I hang out
 	      	</Text>
       	</Center>

@@ -9,8 +9,6 @@ interface Props {
 export function AboutTile(props: Props) {
 	const image = props.data.image
 	const direction = props.direction
-	console.log(direction)
-	console.log(image)
 
 	return (
 		<Flex direction={'row'} w='100%'>

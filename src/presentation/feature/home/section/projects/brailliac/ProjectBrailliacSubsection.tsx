@@ -5,6 +5,7 @@ interface Props {
 	title: string
 	description: string
 	image: ImageData
+	openProject: () => void
 }
 
 export function ProjectBrailliacSubsection(props: Props) {
@@ -14,10 +15,11 @@ export function ProjectBrailliacSubsection(props: Props) {
 				<Text textStyle='body' fontWeight={700}>{props.title}</Text>
 	    		<Box h='10px'/>
 				<Text textStyle='body'>{props.description}</Text>
-	    		<Box h='40px'/>
-	    		<Clickable as='div' w='100%' cursor='pointer'>
+				<Box h='40px'/>
+	    		<Box flex={1}/>
+	    		<Clickable w='100%' onClick={props.openProject}>
 					<Text 
-						textStyle='body' 
+						textStyle='fine' 
 						backgroundColor='#000' 
 						color='#fff' 
 						borderRadius='10px' 
@@ -29,12 +31,14 @@ export function ProjectBrailliacSubsection(props: Props) {
 					</Text>
 				</Clickable>
 	    	</Flex>
-	    	<Box w='20px'/>
+	    	<Box w='30px'/>
 	    	<Image
-	    			src={props.image.src}
-	    			alt={props.image.alt}
-		  			width='200px'
-    			/>
+    			src={props.image.src}
+    			alt={props.image.alt}
+	  			width='200px'
+	  			objectFit='contain'
+	  			align='50% bottom'
+			/>
 	    </Flex>
     )
 }
