@@ -11,8 +11,8 @@ interface Props {
 
 export function ProjectBrailliacSubsection(props: Props) {
 	return (
-		<Flex direction={'row'} >
-			<Flex direction={'column'} flex={1}>
+		<Flex direction={'row'} w={'100%'} >
+			<Flex direction={'column'} flex={5}>
 				<Text textStyle='body' fontWeight={700}>{props.title}</Text>
 	    		<Box h='10px'/>
 				<Text textStyle='body'>{props.description}</Text>
@@ -32,14 +32,19 @@ export function ProjectBrailliacSubsection(props: Props) {
 					</Text>
 				</Clickable>
 	    	</Flex>
-	    	<Box w='30px'/>
-	    	<Image
-    			src={props.image.src}
-    			alt={props.image.alt}
-	  			width='200px'
-	  			objectFit='contain'
-	  			align='50% bottom'
-			/>
+	    	<Box flex={1} />
+	    	<Box flex={3} >
+	    		<Flex direction={'column'} h='100%'>
+	    			<Box flex={1} />
+			    	<Image
+		    			src={props.image.src}
+		    			alt={props.image.alt}
+			  			w={'100%'}
+			  			objectFit='contain'
+			  			align='50% bottom'
+					/>
+				</Flex>
+			</Box>
 	    </Flex>
     )
 }

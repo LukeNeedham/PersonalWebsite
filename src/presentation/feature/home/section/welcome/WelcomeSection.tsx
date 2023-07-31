@@ -13,7 +13,8 @@ export function WelcomeSection(props: Props) {
     		<Center>
 	    		<Image
 				  borderRadius='full'
-				  boxSize='350px'
+				  w='80%'
+				  maxW='350px'
 				  src='/asset/photo/posing.png'
 				  alt='A mugshot of Luke Needham'
 				/>
@@ -21,7 +22,7 @@ export function WelcomeSection(props: Props) {
     		<Box h='25px' />
     		<Center>
     			<Text textStyle={'body'} textAlign='center'>
-    				Hi, I&apos;m
+    				Hi, I’m
     			</Text>
     		</Center>
     		<Center>
@@ -31,16 +32,16 @@ export function WelcomeSection(props: Props) {
     		</Center>
     		<Box h='80px' />
     		<Flex direction={'row'} w='100%'>
-    			<SectionJumpButton name={'About'} anchor={UrlProvider.anchor.about} flex={3} openSection={props.openSection} />
+    			<SectionJumpButton name={'About'} anchor={UrlProvider.anchor.about} flex={4} openSection={props.openSection} />
     			<Box flex={1} />
-    			<SectionJumpButton name={'Socials'} anchor={UrlProvider.anchor.socials} flex={3} openSection={props.openSection} />
+    			<SectionJumpButton name={'Socials'} anchor={UrlProvider.anchor.socials} flex={4} openSection={props.openSection} />
     			<Box flex={1} />
-    			<SectionJumpButton name={'Projects'} anchor={UrlProvider.anchor.projects} flex={3} openSection={props.openSection} />
+    			<SectionJumpButton name={'Projects'} anchor={UrlProvider.anchor.projects} flex={4} openSection={props.openSection} />
     		</Flex>
-    		<Box h='20px' />
+    		<Box h='50px' />
     		<Center>
 	    		<Text textStyle={'fine'}>
-	    			Or, keep scrolling to learn more about me...
+	    			Keep scrolling to learn more about me...
 	    		</Text>
     		</Center>
     	</Flex>

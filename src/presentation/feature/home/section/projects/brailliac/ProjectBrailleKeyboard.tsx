@@ -13,7 +13,7 @@ export function ProjectBrailleKeyboard(props: Props) {
 	return (
 		<ProjectBrailliacSubsection
 			title='Braille Keyboard'
-			description='A customisable Android keyboard for typing Braille'
+			description='A customisable Android keyboard for typing Braille.'
 			image={image}
 			openProject={ () => props.openProject(url) }
 		/>

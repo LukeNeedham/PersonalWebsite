@@ -19,13 +19,15 @@ export function SocialsSection(props: Props) {
 
 	return (
       <Flex direction={'column'} id={props.anchor}>
+ 		{ /* A little padding on the top so the anchor isn't right at the top of the content */ }
+		<Box h='50px' />
       	<Center>
 	      	<Text textStyle={'mainTitle'} textAlign='center'>
 	      		Where I hang out
 	      	</Text>
       	</Center>
       	<Box h='80px' />
-      	<VStack spacing='30px'>
+      	<VStack spacing={{base: '15px', md: '30px'}}>
 			{ tiles }
 		</VStack>
       </Flex>

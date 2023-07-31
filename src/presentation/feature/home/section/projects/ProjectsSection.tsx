@@ -9,6 +9,8 @@ interface Props {
 export function ProjectsSection(props: Props) {
 	return (
       <Flex direction={'column'} id={props.anchor}>
+      	{ /* A little padding on the top so the anchor isn't right at the top of the content */ }
+		<Box h='50px' />
       	<Center>
 	      	<Text textStyle={'mainTitle'} textAlign='center'>
 	      		Projects I’m proud of

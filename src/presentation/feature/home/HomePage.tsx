@@ -7,13 +7,13 @@ import { openInCurrentTab, openInNewTab } from 'presentation/util/Window'
 import { UrlProvider } from 'domain/provider/UrlProvider'
 
 export function HomePage() {
-  const betweenSectionSpace = '250px'
+  const betweenSectionSpace = '200px'
   return (
     <Center w='100%'>
-      <Flex direction={'column'} w='80%'>
+      <Flex direction={'column'} w={{ base: '90%', md: '80%', lg: '70%' }}>
         <Box h='60px'/>
         <WelcomeSection anchor={UrlProvider.anchor.welcome} openSection={openInCurrentTab}/>
-        <Box h='150px'/>
+        <Box h='100px'/>
         <AboutSection anchor={UrlProvider.anchor.about}/>
         <Box h={betweenSectionSpace}/>
         <SocialsSection 

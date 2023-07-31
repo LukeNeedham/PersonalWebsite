@@ -7,7 +7,7 @@ const socialGithub: SocialTileData = {
 		src: '/asset/icon/github.svg',
 		alt: 'Github'
 	},
-	description: 'I love Open Source software - check out my Github to see my personal projects and other contributions.',
+	description: 'I love Open Source - check out my Github to see my projects.',
 	url: 'github.com/LukeNeedham',
 	urlScheme: 'https://',
 }
@@ -19,7 +19,7 @@ const socialStackoverflow: SocialTileData = {
 		src: '/asset/icon/stackoverflow.svg',
 		alt: 'StackOverflow'
 	},
-	description: 'Like every developer, I use StackOverflow. I also like to give back to the community by answering questions.',
+	description: 'Without StackOverflow I wouldn’t be here. I enjoy giving back to the community.',
 	url: 'stackoverflow.com/users/6007104/luke-needham',
 	urlScheme: 'https://',
 }
@@ -31,7 +31,7 @@ const socialLinkedIn: SocialTileData = {
 		src: '/asset/icon/linkedin.png',
 		alt: 'LinkedIn'
 	},
-	description: 'I use LinkedIn to stay in contact with colleagues and share my projects. If you wish to get in touch, feel free to connect with me.',
+	description: 'If you’d like to get in touch, feel free to connect with me on LinkedIn.',
 	url: 'linkedin.com/in/luke-needham/',
 	urlScheme: 'https://',
 }
@@ -43,7 +43,7 @@ const socialMedium: SocialTileData = {
 		src: '/asset/icon/medium.png',
 		alt: 'Medium'
 	},
-	description: 'When I’m not writing code, I’m writing articles on Medium. I usually like to write about oddities in the Android framework.',
+	description: 'When I’m not writing code, I’m writing Medium articles. I like to write about Android quirks.',
 	url: 'lukeneedham.medium.com',
 	urlScheme: 'https://',
 }

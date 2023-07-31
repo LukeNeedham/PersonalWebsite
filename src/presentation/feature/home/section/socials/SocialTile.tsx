@@ -22,11 +22,11 @@ export function SocialTile(props: Props) {
 			 	paddingX='30px'
 			>
 				<Image
-					boxSize='100px'
+					boxSize={{base: '30px', md: '60px'}}
 					src={props.data.icon.src}
 					alt={props.data.icon.alt}
 				/>
-				<Box w='40px' />
+				<Box w={{base: '20px', lg: '40px'}} />
 				<Flex direction='column' flex={1}>
 					<Text 
 						textStyle={'body'} 

@@ -16,7 +16,7 @@ export function AboutSection(props: Props) {
 	return (
 		<Flex direction='column' id={props.anchor}>
 			{ /* A little padding on the top so the anchor isn't right at the top of the content */ }
-			<Box h='20px' />
+			<Box h='50px' />
 			<VStack spacing='80px'>
 				{ tiles }
 			</VStack>
