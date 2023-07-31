@@ -1,4 +1,5 @@
 This project is the personal website for Luke Needham.
+It is hosted at [LukeNeedham.com](https://lukeneedham.com).
 
 It is a Next.js project using React, Typescript, and Chakra UI.
 
