@@ -4,7 +4,7 @@ const tileProblemSolving: AboutTileData = {
 		alt: 'Me stretching across holds while solving a problem on a bouldering wall',
 	},
 	title: 'I solve problems',
-	description: 'I love problem solving, which is why I love software engineering. I have professional development experience with Android, web front-end, and games in Unity.',
+	description: 'I have a passion for problem-solving, which is why I love software engineering. I have professional development experience with Android, web front-end, and games in Unity.',
 }
 
 const tileAndroid: AboutTileData = {
@@ -12,7 +12,7 @@ const tileAndroid: AboutTileData = {
 		src: '/asset/photo/programming.png',
 		alt: 'Me as a floppy-haired student sitting in front of my laptop during a Hackathon',
 	},
-	title: 'My passion is Android',
+	title: 'I love Android',
 	description: 'I’ve been developing for Android ever since I was 17. I’ve made apps, libraries, launchers, widgets, system keyboards, and much more.',
 }
 
@@ -39,7 +39,7 @@ const tileHobbies: AboutTileData = {
 		src: '/asset/photo/hiking.png',
 		alt: 'Me posing in front of a forest, valley, and mountain range while hiking in Switzerland on a beautiful sunny day',
 	},
-	title: 'When not working...',
+	title: 'I also have hobbies',
 	description: 'I like to dabble in design - including this very website. I also love language, music, bouldering, cycling, and hiking.',
 }
 

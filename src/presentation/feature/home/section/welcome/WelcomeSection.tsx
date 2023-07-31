@@ -24,6 +24,7 @@ export function WelcomeSection() {
 	    		</Text>
     		</Center>
     		<Box h='50px' />
+    		todo: add section for jump to section
     		<Center>
 	    		<Text textStyle={'fine'}>
 	    			Keep scrolling to learn more about me...
