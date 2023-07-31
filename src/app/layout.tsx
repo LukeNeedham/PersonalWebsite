@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from "app/providers"
 
@@ -9,6 +8,7 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en">
+      <title>Luke Needham</title>
       <body className={inter.className}>
         <Providers>
           {children}
