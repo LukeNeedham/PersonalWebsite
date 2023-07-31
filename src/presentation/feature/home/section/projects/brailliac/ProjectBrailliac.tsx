@@ -40,7 +40,7 @@ export function ProjectBrailliac(props: Props) {
 	    			</Text>
 	    		</Flex>
 	    	</Flex>
-	    	<Box h='80px'/>
+	    	<Box h='100px'/>
 	    	<SimpleGrid minChildWidth='350px' spacing='100px'>
 	    		<ProjectBrailleTutor openProject={props.openProject} />
 	    		<ProjectBrailleKeyboard openProject={props.openProject} />

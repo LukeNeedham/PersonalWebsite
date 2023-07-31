@@ -34,7 +34,7 @@ export function SocialTile(props: Props) {
 					>
 						{props.data.description}
 					</Text>
-					<Box h='5px' />
+					<Box h='2px' />
 					{ /* The url can be quite long, it needs to be wrappable */ }
 					<Text 
 						textStyle={'fine'} 

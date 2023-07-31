@@ -16,7 +16,7 @@ export function ProjectsSection(props: Props) {
 	      		Projects I’m proud of
 	      	</Text>
       	</Center>
-      	<Box h='100px' />
+      	<Box h='120px' />
       	<ProjectBrailliac openProject={props.openProject} />
       </Flex>
 	)
