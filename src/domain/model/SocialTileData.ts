@@ -1,3 +1,5 @@
+import { ImageData } from 'domain/model/ImageData'
+
 export interface SocialTileData {
 	backgroundColor: string
 	foregroundColor: string

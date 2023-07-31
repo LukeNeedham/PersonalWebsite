@@ -1,5 +1,6 @@
 import { Clickable } from 'presentation/common/Clickable'
 import { Image, Flex, Text, Box } from '@chakra-ui/react'
+import { SocialTileData } from 'domain/model/SocialTileData'
 
 interface Props {
 	data: SocialTileData

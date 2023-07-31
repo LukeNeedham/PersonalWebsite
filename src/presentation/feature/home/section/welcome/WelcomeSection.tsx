@@ -4,7 +4,7 @@ import { UrlProvider } from 'domain/provider/UrlProvider'
 
 interface Props {
 	anchor: string
-	openSection: () => void
+	openSection: (url: string) => void
 }
 
 export function WelcomeSection(props: Props) {
@@ -21,7 +21,7 @@ export function WelcomeSection(props: Props) {
     		<Box h='25px' />
     		<Center>
     			<Text textStyle={'body'} textAlign='center'>
-    				Hi, I'm
+    				Hi, I&apos;m
     			</Text>
     		</Center>
     		<Center>

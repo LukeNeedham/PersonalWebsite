@@ -4,7 +4,7 @@ import { Clickable } from 'presentation/common/Clickable'
 interface Props extends BoxProps {
 	name: string
 	anchor: string
-	openSection: () => void
+	openSection: (url: string) => void
 }
 
 export function SectionJumpButton(props: Props) {

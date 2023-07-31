@@ -1,3 +1,5 @@
+import { AboutTileData } from 'domain/model/AboutTileData'
+
 const tileProblemSolving: AboutTileData = {
 	image: {
 		src: '/asset/photo/bouldering.png',

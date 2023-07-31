@@ -1,5 +1,6 @@
 import { Box, Flex, Spacer, Center, Text, Image, Button } from '@chakra-ui/react'
 import { Clickable } from 'presentation/common/Clickable'
+import { ImageData } from 'domain/model/ImageData'
 
 interface Props {
 	title: string
