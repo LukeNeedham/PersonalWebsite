@@ -21,7 +21,6 @@ export function SocialTile(props: Props) {
 			 	paddingX='30px'
 			>
 				<Image
-					src={props.data.icon}
 					boxSize='100px'
 					src={props.data.icon.src}
 					alt={props.data.icon.alt}
