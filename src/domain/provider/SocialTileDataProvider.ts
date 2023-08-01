@@ -19,7 +19,7 @@ const socialStackoverflow: SocialTileData = {
 		src: '/asset/icon/stackoverflow.svg',
 		alt: 'StackOverflow'
 	},
-	description: 'Without StackOverflow I wouldn’t be here. I enjoy answering questions to  back to the community.',
+	description: 'Without StackOverflow I wouldn’t be here. I enjoy answering questions to give back to the community.',
 	url: 'stackoverflow.com/users/6007104/luke-needham',
 	urlScheme: 'https://',
 }
