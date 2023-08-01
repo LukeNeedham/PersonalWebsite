@@ -13,7 +13,7 @@ export function ProjectBrailleKeyboard(props: Props) {
 	return (
 		<ProjectBrailliacSubsection
 			title='Braille Keyboard'
-			description='A customisable Android keyboard for typing Braille.'
+			description='A customisable Android system keyboard controlled with a Braille cell. Useful for typing Braille characters directly, or for practising Braille translation while typing in any other app!'
 			image={image}
 			openProject={ () => props.openProject(url) }
 		/>
