@@ -31,7 +31,7 @@ const socialLinkedIn: SocialTileData = {
 		src: '/asset/icon/linkedin.png',
 		alt: 'LinkedIn'
 	},
-	description: 'To learn more about my career so far, check my LinkedIn. Feel free to connect with me if you'd like to get in touch.',
+	description: 'To learn more about my career so far, check my LinkedIn. Feel free to connect with me if you’d like to get in touch.',
 	url: 'linkedin.com/in/luke-needham/',
 	urlScheme: 'https://',
 }
