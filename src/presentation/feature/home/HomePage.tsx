@@ -15,14 +15,14 @@ export function HomePage() {
         <WelcomeSection anchor={UrlProvider.anchor.welcome} openSection={openInCurrentTab}/>
         <Box h='100px'/>
         <AboutSection anchor={UrlProvider.anchor.about}/>
-        <Box h={betweenSectionSpace}/>
+        <Box h={betweenSectionSpace} />
+        <ProjectsSection openProject={openInNewTab} anchor={UrlProvider.anchor.projects} />
+        <Box h={betweenSectionSpace} />
         <SocialsSection 
           onTileClick={openInNewTab}
           anchor={UrlProvider.anchor.socials}
         />
-        <Box h={betweenSectionSpace} />
-        <ProjectsSection openProject={openInNewTab} anchor={UrlProvider.anchor.projects} />
-        <Box h={betweenSectionSpace} />
+        <Box h={betweenSectionSpace}/>
       </Flex>
     </Center>
   )

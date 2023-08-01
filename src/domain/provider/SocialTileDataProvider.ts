@@ -7,7 +7,7 @@ const socialGithub: SocialTileData = {
 		src: '/asset/icon/github.svg',
 		alt: 'Github'
 	},
-	description: 'I love Open Source - check out my Github to see my projects.',
+	description: 'I love Open Source. Check out my Github to see my projects - including this very website.',
 	url: 'github.com/LukeNeedham',
 	urlScheme: 'https://',
 }
@@ -19,7 +19,7 @@ const socialStackoverflow: SocialTileData = {
 		src: '/asset/icon/stackoverflow.svg',
 		alt: 'StackOverflow'
 	},
-	description: 'Without StackOverflow I wouldn’t be here. I enjoy giving back to the community.',
+	description: 'Without StackOverflow I wouldn’t be here. I enjoy answering questions to give back to the community.',
 	url: 'stackoverflow.com/users/6007104/luke-needham',
 	urlScheme: 'https://',
 }
@@ -31,7 +31,7 @@ const socialLinkedIn: SocialTileData = {
 		src: '/asset/icon/linkedin.png',
 		alt: 'LinkedIn'
 	},
-	description: 'If you’d like to get in touch, feel free to connect with me on LinkedIn.',
+	description: 'To learn more about my career so far, check my LinkedIn. Feel free to connect with me if you’d like to get in touch.',
 	url: 'linkedin.com/in/luke-needham/',
 	urlScheme: 'https://',
 }
