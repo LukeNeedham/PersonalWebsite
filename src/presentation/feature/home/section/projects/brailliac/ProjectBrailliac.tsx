@@ -41,7 +41,7 @@ export function ProjectBrailliac(props: Props) {
 	    		</Flex>
 	    	</Flex>
 	    	<Box h='100px'/>
-	    	<SimpleGrid minChildWidth='500px' spacing='100px'>
+	    	<SimpleGrid columns={{base: 1, '2xl': 2}} spacing='100px'>
 	    		<ProjectBrailleTutor openProject={props.openProject} />
 	    		<ProjectBrailleKeyboard openProject={props.openProject} />
 	    	</SimpleGrid>
