@@ -34,9 +34,9 @@ export function WelcomeSection(props: Props) {
     		<Flex direction={'row'} w='100%'>
     			<SectionJumpButton name={'About'} anchor={UrlProvider.anchor.about} flex={4} openSection={props.openSection} />
     			<Box flex={1} />
-    			<SectionJumpButton name={'Socials'} anchor={UrlProvider.anchor.socials} flex={4} openSection={props.openSection} />
-    			<Box flex={1} />
     			<SectionJumpButton name={'Projects'} anchor={UrlProvider.anchor.projects} flex={4} openSection={props.openSection} />
+   			 <Box flex={1} />
+    			<SectionJumpButton name={'Socials'} anchor={UrlProvider.anchor.socials} flex={4} openSection={props.openSection} />
     		</Flex>
     		<Box h='50px' />
     		<Center>
