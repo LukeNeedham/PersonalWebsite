@@ -13,7 +13,7 @@ export function ProjectBrailleTutor(props: Props) {
 	return (
 		<ProjectBrailliacSubsection
 			title='Braille Tutor'
-			description='A gamified educational app with 180,000 downloads.'
+			description='A gamified educational app with over 200,000 downloads.'
 			image={image}
 			openProject={ () => props.openProject(url) }
 		/>
