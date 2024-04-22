@@ -1,7 +1,7 @@
-import { AboutTileDirection } from 'presentation/feature/home/section/about/tile/AboutTileDirection'
 import { ImageData } from 'domain/model/ImageData'
 import { AboutTileData } from 'domain/model/AboutTileData'
 import { Flex, Text, Image, Box } from '@chakra-ui/react'
+import { AboutTileDirection } from './AboutTileDirection'
 
 interface Props {
 	data: AboutTileData

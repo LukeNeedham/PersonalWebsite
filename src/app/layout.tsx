@@ -11,7 +11,7 @@ export default function RootLayout(
       <title>Luke Needham</title>
       <body className={inter.className}>
         <Providers>
-          {children}
+            {children}
         </Providers>
       </body>
     </html>

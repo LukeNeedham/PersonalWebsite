@@ -1,7 +1,7 @@
-import { Box, Flex, Spacer, Center, Text, Image, SimpleGrid, AspectRatio } from '@chakra-ui/react'
-import { ProjectBrailleTutor } from 'presentation/feature/home/section/projects/brailliac/ProjectBrailleTutor'
-import { ProjectBrailleKeyboard } from 'presentation/feature/home/section/projects/brailliac/ProjectBrailleKeyboard'
+import { Box, Flex, Spacer, Center, Text, Image, SimpleGrid, AspectRatio, VStack } from '@chakra-ui/react'
 import { Clickable } from 'presentation/common/Clickable'
+import { ProjectBrailleKeyboard } from './ProjectBrailleKeyboard'
+import { ProjectBrailleTutor } from './ProjectBrailleTutor'
 
 interface Props {
 	openProject: (url: string) => void
@@ -41,10 +41,10 @@ export function ProjectBrailliac(props: Props) {
 	    		</Flex>
 	    	</Flex>
 	    	<Box h='100px'/>
-	    	<SimpleGrid columns={{base: 1, '2xl': 2}} spacing='100px'>
+	    	<VStack direction={'column'} spacing='100px'>
 	    		<ProjectBrailleTutor openProject={props.openProject} />
 	    		<ProjectBrailleKeyboard openProject={props.openProject} />
-	    	</SimpleGrid>
+	    	</VStack>
 	    </Flex>
     )
 }

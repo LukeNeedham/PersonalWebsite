@@ -1,8 +1,6 @@
 export const UrlProvider = {
-	anchor: {
-		welcome: 'welcome',
-		about: 'about',
-		socials: 'socials',
-		projects: 'projects',
-	}
+	about: 'about',
+	projects: 'projects',
+	blog: 'blog',
+	socials: 'socials',
 }

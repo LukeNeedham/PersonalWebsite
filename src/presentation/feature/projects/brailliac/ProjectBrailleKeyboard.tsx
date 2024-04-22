@@ -1,4 +1,4 @@
-import { ProjectBrailliacSubsection } from 'presentation/feature/home/section/projects/brailliac/ProjectBrailliacSubsection'
+import { ProjectBrailliacSubsection } from "./ProjectBrailliacSubsection"
 
 interface Props {
 	openProject: (url: string) => void

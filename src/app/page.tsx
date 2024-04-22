@@ -1,7 +1,7 @@
 'use client'
 
-import { HomePage } from '../presentation/feature/home/HomePage'
+import {AboutPage} from "../presentation/feature/about/AboutPage";
 
 export default function Page() {
-  return <HomePage />
+  return <AboutPage />
 }

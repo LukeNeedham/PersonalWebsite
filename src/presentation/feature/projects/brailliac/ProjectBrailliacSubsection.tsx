@@ -33,7 +33,7 @@ export function ProjectBrailliacSubsection(props: Props) {
 				</Clickable>
 	    	</Flex>
 	    	<Box flex={1} />
-	    	<Box flex={3} >
+	    	<Box flex={1.5} >
 	    		<Flex direction={'column'} h='100%'>
 	    			<Box flex={1} />
 			    	<Image
