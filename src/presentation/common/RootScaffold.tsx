@@ -22,7 +22,7 @@ export function RootScaffold(
           >
           <Box
             paddingTop={'50px'}
-            paddingBottom={'30px'}
+            paddingBottom={'80px'}
             h={'100%'}
             w={{ base: '90%', md: '80%', lg: '70%' }}
           >

@@ -14,17 +14,17 @@ export function NavBarButton(props: Props) {
 			onClick={onClick} 
 			{...boxProps}
 		>
-			<Center w={'100%'} paddingTop={'15px'} paddingBottom={'10px'} paddingX={'5px'} >
+			<Center w={'100%'} paddingTop={'10px'} paddingBottom={'5px'} paddingX={'5px'} >
 				<Flex direction={'column'}>
 					<Center w={'100%'}>
 						<Image
 							src={icon}
 							alt={""}
-							h={{base: '35px', sm: '50px', md: '60px'}}
+							h={{base: '35px', sm: '50px', md: '50px'}}
 						/>
 					</Center>
 
-					<Box h={'5px'} />
+					<Box h={'2px'} />
 
 					<Center w={'100%'}>
 						<Text

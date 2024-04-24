@@ -20,11 +20,12 @@ export function ProjectBrailliacSubsection(props: Props) {
 	    		<Box flex={1}/>
 	    		<Clickable w='100%' onClick={props.openProject}>
 					<Text 
-						textStyle='fine' 
+						textStyle='body'
 						backgroundColor='#000' 
 						color='#fff' 
 						borderRadius='10px' 
-						padding='10px' 
+						paddingX='10px'
+						paddingY={'15px'}
 						textAlign='center'
 						w='100%'
 					>

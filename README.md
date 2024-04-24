@@ -22,3 +22,12 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+# Credits
+
+This website uses the following icons from external sources:
+
+- Puzzle by Yoyon Pujiyono from <a href="https://thenounproject.com/browse/icons/term/puzzle/" target="_blank" title="Puzzle Icons">Noun Project</a> (CC BY 3.0)
+- Sticky notes by Yoyon Pujiyono from <a href="https://thenounproject.com/browse/icons/term/sticky-notes/" target="_blank" title="sticky notes Icons">Noun Project</a> (CC BY 3.0)
+- Decision making by Yoyon Pujiyono from <a href="https://thenounproject.com/browse/icons/term/decision-making/" target="_blank" title="decision making Icons">Noun Project</a> (CC BY 3.0)
+- Project by Yoyon Pujiyono from <a href="https://thenounproject.com/browse/icons/term/project/" target="_blank" title="Project Icons">Noun Project</a> (CC BY 3.0)

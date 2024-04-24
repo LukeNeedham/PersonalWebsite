@@ -26,7 +26,7 @@ const textStyles = {
     },
     fine: {
         fontWeight: 300,
-        fontSize: {base: '13px', sm: '16px', lg: '18px', xl: '20px'},
+        fontSize: {base: '13px', md: '16px'},
         margin: '0px',
     },
 }
