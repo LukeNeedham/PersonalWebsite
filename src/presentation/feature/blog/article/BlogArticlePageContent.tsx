@@ -1,15 +1,28 @@
 import {Center, Flex, Text, VStack, Box, ListItem, UnorderedList} from "@chakra-ui/react"
+import {useEffect, useState} from "react"
 import Markdown, { Components } from 'react-markdown'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { androidstudio } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
 
 interface Props {
-    content: string
+    contentFile: string
 }
 
 export function BlogArticlePageContent(props: Props) {
-    const content = props.content
+    const contentFile = props.contentFile
+    
+    const [content, setContent] = useState('');
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await fetch(contentFile)
+            const text = await result.text()
+            setContent(text)
+        }
+    
+        fetchData()
+    }, [contentFile])
     
     const customComponents: Components = {
         li(props) {

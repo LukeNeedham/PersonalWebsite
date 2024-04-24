@@ -2,6 +2,6 @@ export interface BlogArticle {
     id: string
     title: string
     image: string
-    content: string
+    contentFile: string
     publishDate: string
 }

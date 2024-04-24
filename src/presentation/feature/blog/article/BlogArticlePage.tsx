@@ -13,7 +13,7 @@ export function BlogArticlePage(props: Props) {
     
     const title = article?.title ?? "Article not found"
     
-    const content = article === undefined ? null : <BlogArticlePageContent content={article.content} />
+    const content = article === undefined ? null : <BlogArticlePageContent contentFile={article.contentFile} />
     
     return (
         <RootScaffold selectedNavButton={NavBarProvider.blog}>
