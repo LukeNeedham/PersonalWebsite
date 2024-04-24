@@ -10,23 +10,19 @@ const textStyles = {
         fontWeight: 700,
         fontSize: mainTitleSize,
         lineHeight: mainTitleSize,
-        margin: '0px',
     },
     subTitle: {
         fontWeight: 700,
         fontSize: {base: '25px', sm: '30px', lg: '40px', xl: '45px'},
         lineHeight: {base: '30px', sm: '35px', lg: '45px', xl: '50px'},
-        margin: '0px',
     },
     body: {
         fontWeight: 300,
         fontSize: {base: '15px', sm: '20px', lg: '21px', xl: '25px'},
-        margin: '0px',
     },
     fine: {
         fontWeight: 300,
         fontSize: {base: '13px', md: '16px'},
-        margin: '0px',
     },
 }
 
