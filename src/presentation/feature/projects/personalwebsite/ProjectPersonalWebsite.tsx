@@ -10,7 +10,7 @@ interface Props {
 export function ProjectPersonalWebsite(props: Props) {
     return (
         <ProjectHeader
-            imageUrl='/asset/photo/posing.png'
+            imageUrl='/asset/image/photo/posing.png'
             imageAlt='A mugshot of Luke Needham'
             onImageClick={ () => {} }
             title={'Personal Website'}

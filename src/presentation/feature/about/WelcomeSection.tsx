@@ -8,7 +8,7 @@ export function WelcomeSection() {
 				  borderRadius='full'
 				  w='80%'
 				  maxW='350px'
-				  src='/asset/photo/posing.png'
+				  src='/asset/image/photo/posing.png'
 				  alt='A mugshot of Luke Needham'
 				/>
     		</Center>

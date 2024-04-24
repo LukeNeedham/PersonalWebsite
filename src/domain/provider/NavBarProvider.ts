@@ -3,22 +3,22 @@ import { UrlProvider } from "./UrlProvider"
 
 const about: NavButtonData = {
     name: 'About',
-    icon: '/asset/icon/person.svg',
+    icon: '/asset/image/icon/person.svg',
     url: UrlProvider.about,
 }
 const projects: NavButtonData = {
     name: 'Projects',
-    icon: '/asset/icon/projects.svg',
+    icon: '/asset/image/icon/projects.svg',
     url: UrlProvider.projects,
 }
 const blog: NavButtonData = {
     name: 'Blog',
-    icon: '/asset/icon/blog.svg',
+    icon: '/asset/image/icon/blog.svg',
     url: UrlProvider.blog,
 }
 const socials: NavButtonData = {
     name: 'Socials',
-    icon: '/asset/icon/socials.svg',
+    icon: '/asset/image/icon/socials.svg',
     url: UrlProvider.socials,
 }
 

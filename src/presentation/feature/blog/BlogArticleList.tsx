@@ -1,6 +1,7 @@
 import {BlogArticle} from "../../../domain/model/BlogArticle";
-import {Flex, Text} from "@chakra-ui/react";
+import {Flex, Text, VStack} from "@chakra-ui/react";
 import { BlogArticleListItem } from "./BlogArticleListItem";
+import {openInCurrentTab} from "../../util/Window";
 
 interface Props {
     articles: BlogArticle[]
@@ -8,10 +9,16 @@ interface Props {
 
 export function BlogArticleList(props: Props) {
     return (
-        <Flex direction={'column'}>
+        <VStack spacing={'20px'}>
             {
-                props.articles.map(it => <BlogArticleListItem key={it.title} article={it} />)
+                props.articles.map(it =>
+                    <BlogArticleListItem
+                        key={it.title}
+                        article={it}
+                        onClick={() => openInCurrentTab(`/blog/${it.id}`)}
+                    />
+                )
             }
-        </Flex>
+        </VStack>
     )
 }

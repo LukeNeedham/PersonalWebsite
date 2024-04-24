@@ -4,7 +4,7 @@ const socialGithub: SocialTileData = {
 	backgroundColor: '#24292F',
 	foregroundColor: '#FFFFFF',
 	icon: {
-		src: '/asset/icon/github.svg',
+		src: '/asset/image/icon/github.svg',
 		alt: 'Github'
 	},
 	description: 'I love Open Source. Check out my Github to see my projects - including this very website.',
@@ -16,7 +16,7 @@ const socialStackoverflow: SocialTileData = {
 	backgroundColor: '#F48225',
 	foregroundColor: '#FFFFFF',
 	icon: {
-		src: '/asset/icon/stackoverflow.svg',
+		src: '/asset/image/icon/stackoverflow.svg',
 		alt: 'StackOverflow'
 	},
 	description: 'Without StackOverflow I wouldn’t be here. I enjoy answering questions to give back to the community.',
@@ -28,7 +28,7 @@ const socialLinkedIn: SocialTileData = {
 	backgroundColor: '#0077B5',
 	foregroundColor: '#FFFFFF',
 	icon: {
-		src: '/asset/icon/linkedin.png',
+		src: '/asset/image/icon/linkedin.png',
 		alt: 'LinkedIn'
 	},
 	description: 'To learn more about my career so far, check my LinkedIn. Feel free to connect with me if you’d like to get in touch.',
@@ -40,7 +40,7 @@ const socialMedium: SocialTileData = {
 	backgroundColor: '#000000',
 	foregroundColor: '#FFFFFF',
 	icon: {
-		src: '/asset/icon/medium.png',
+		src: '/asset/image/icon/medium.png',
 		alt: 'Medium'
 	},
 	description: 'When I’m not writing code, I’m writing Medium articles. I like to write about Android quirks.',
