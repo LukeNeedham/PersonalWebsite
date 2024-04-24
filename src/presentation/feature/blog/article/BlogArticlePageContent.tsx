@@ -50,13 +50,16 @@ export function BlogArticlePageContent(props: Props) {
             }
             return (
                 <Box borderRadius={'5px'} overflow={'hidden'} marginBottom={'25px'} marginTop={'10px'}>
+                    { /* Types for SyntaxHighlighter are broken */ }
+                    {/* @ts-ignore */}
                     <SyntaxHighlighter
                         {...rest}
                         PreTag="div"
-                        children={String(children).replace(/\n$/, '')}
                         language={match[1]}
                         style={androidstudio}
-                    />
+                    >
+                        {String(children).replace(/\n$/, '')}
+                    </SyntaxHighlighter>
                 </Box>
                 )
         }
@@ -66,8 +69,9 @@ export function BlogArticlePageContent(props: Props) {
 
     return (
         <Markdown
-            children={content}
             components={components}
-        />
+        >
+            {content}
+        </Markdown>
     )
 }

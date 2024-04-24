@@ -16,7 +16,7 @@ export function ProjectPersonalWebsite(props: Props) {
             title={'Personal Website'}
             description={
             <Text textStyle='body'>
-                The website you're looking at right now! Check out the source code and icon credits{' '}
+                The website you&apos;re looking at right now! Check out the source code and icon credits{' '}
                 <Clickable onClick={props.openProject} as='span' textStyle='body' textDecoration='underline'>
                     here
                 </Clickable>
