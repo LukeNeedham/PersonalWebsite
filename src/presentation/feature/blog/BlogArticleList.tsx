@@ -9,7 +9,7 @@ interface Props {
 
 export function BlogArticleList(props: Props) {
     return (
-        <VStack spacing={'20px'}>
+        <VStack spacing={'20px'} w={'full'}>
             {
                 props.articles.map(it =>
                     <BlogArticleListItem

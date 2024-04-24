@@ -10,7 +10,7 @@ interface Props {
 
 export function BlogArticleListItem(props: Props) {
     return (
-        <Clickable onClick={props.onClick}>
+        <Clickable onClick={props.onClick} w={'full'}>
             <Flex direction={'row'} background={'#ddd'} padding={'15px'} borderRadius={'10px'} w={'full'}>
                 <Center flex={1} borderRadius={'10px'} background={'#000'} overflow={'hidden'}>
                     <Image
