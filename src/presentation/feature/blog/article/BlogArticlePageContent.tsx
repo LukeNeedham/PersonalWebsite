@@ -78,9 +78,7 @@ export function BlogArticlePageContent(props: Props) {
         },
         a(props) {
             return (
-                <Link href={props.href}>
-                    <Text textStyle={'body'} display="inline" textDecoration={'underline'} {...props} />
-                </Link>
+                <Link href={props.href} textDecoration={'underline'} {...props} />
             )
         },
         p(props) {
