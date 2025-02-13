@@ -11,7 +11,13 @@ This project is deployed on Vercel.
 It will auto-build and deploy whenever the 'main' branch updates.
 Therefore do not push to 'main' with every update, but only when you want to re-deploy.
 
-# Running
+# Development
+
+## Setup
+
+Setup the project by running: `yarn install`
+
+## Testing
 
 First, run the development server:
 

@@ -12,6 +12,7 @@ export function BlogArticlePage(props: Props) {
     const article = BlogArticleProvider.getArticle(props.articleId)
     
     const title = article?.title ?? "Article not found"
+    const date = article?.publishDate?.format() ?? ""
     
     const content = article === undefined ? null : <BlogArticlePageContent contentFile={article.contentFile} />
     
@@ -21,6 +22,12 @@ export function BlogArticlePage(props: Props) {
                 <Center>
                     <Text textStyle={'mainTitle'} textAlign='center'>
                         {title}
+                    </Text>
+                </Center>
+                <Box h='10px' />
+                <Center>
+                    <Text textStyle={'body'} textAlign='center'>
+                        {date}
                     </Text>
                 </Center>
                 <Box h='80px' />

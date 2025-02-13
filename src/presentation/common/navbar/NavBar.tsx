@@ -17,7 +17,7 @@ export function NavBar(props: Props) {
                 {
                     datas.map(it => {
                         const isSelected = it == props.selectedNavButton
-                        const alpha = isSelected ? 1 : 0.4
+                        const alpha = isSelected ? 1 : 0.5
                         return (
                             <NavBarButton
                                 key={it.name}

@@ -9,6 +9,8 @@ interface Props {
 }
 
 export function BlogArticleListItem(props: Props) {
+    const date = props.article.publishDate.format()
+
     return (
         <Clickable onClick={props.onClick} w={'full'}>
             <Flex direction={'row'} background={'#ddd'} padding={'15px'} borderRadius={'10px'} w={'full'}>
@@ -22,7 +24,7 @@ export function BlogArticleListItem(props: Props) {
                 </Center>
                 <Flex direction={'column'} paddingStart={{base: '15px', sm: '30px'}} paddingEnd={'10px'} flex={2} minW={'0px'}>
                     <Text textStyle={'subTitle'}>{props.article.title}</Text>
-                    <Text textStyle={'body'} paddingTop={'20px'}>{props.article.publishDate}</Text>
+                    <Text textStyle={'body'} paddingTop={'20px'}>{date}</Text>
                 </Flex>
             </Flex>
         </Clickable>
