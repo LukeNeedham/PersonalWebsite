@@ -1,7 +1,7 @@
 I just launched "Braille by Ear" for Android! You can read all about it here:
 [blog/braille-by-ear](braille-by-ear)
 
-I was honoured to be selected by JetBrains to recieve a free license for their AI coding assistant Junie, to help with this project.
+I was honoured to be selected by JetBrains to receive a free license for their AI coding assistant Junie, to help with this project.
 
 ## First Impressions
 

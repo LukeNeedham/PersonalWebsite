@@ -30,7 +30,7 @@ You can read all about it here:
 
 # How did I make it?
 
-I was honoured to be selected by JetBrains to recieve a free license for their AI coding assistant Junie, to help with this project.
+I was honoured to be selected by JetBrains to receive a free license for their AI coding assistant Junie, to help with this project.
 
 You can read all about my experience with Junie here:
 [blog/junie](junie)
