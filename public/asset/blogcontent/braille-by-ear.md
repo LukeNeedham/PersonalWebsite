@@ -26,7 +26,7 @@ The result is the Virtual Braille Cell, where your very own fingers become Brail
 And of course, it needs to be fun! Braille by Ear teaches Braille through guided audio lessons, then offers fun educational games for practising your skills. Type Braille against the clock in time trials, practise Braille numbers by solving math puzzles, and hone your dictation skills with real audiobooks.
 
 You can read all about it here:
-[brailliac.com](https://brailliac.com/)
+[brailliac.com#braille-by-ear](https://brailliac.com#braille-by-ear)
 
 # How did I make it?
 
