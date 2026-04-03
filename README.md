@@ -11,6 +11,23 @@ This project is deployed on Vercel.
 It will auto-build and deploy whenever the 'main' branch updates.
 Therefore do not push to 'main' with every update, but only when you want to re-deploy.
 
+## Acceptance Deployment
+
+An acceptance (preview) deployment is created automatically for every pull request via GitHub Actions.
+This lets you test changes in a live environment before merging to `main`.
+
+The workflow (`.github/workflows/acceptance-deployment.yml`) uses the Vercel CLI to build and deploy the PR branch, then posts a comment on the PR with the acceptance URL.
+
+### Required GitHub Secrets
+
+The following secrets must be configured in the repository settings under **Settings → Secrets and variables → Actions**:
+
+| Secret | Description |
+|---|---|
+| `VERCEL_TOKEN` | A Vercel personal access token (create one at https://vercel.com/account/tokens) |
+| `VERCEL_ORG_ID` | Your Vercel team/org ID (found in Vercel project settings) |
+| `VERCEL_PROJECT_ID` | The Vercel project ID (found in Vercel project settings) |
+
 # Development
 
 ## Setup
