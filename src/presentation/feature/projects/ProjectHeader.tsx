@@ -1,10 +1,10 @@
 import { Box, Flex, Spacer, Center, Text, Image, SimpleGrid, AspectRatio, VStack } from '@chakra-ui/react'
-import { Clickable } from 'presentation/common/Clickable'
+import NextLink from 'next/link'
 
 interface Props {
     imageUrl: string
     imageAlt: string
-    onImageClick: () => void
+    href: string
     title: string
     description: JSX.Element
 }
@@ -12,20 +12,40 @@ interface Props {
 export function ProjectHeader(
     props: Props
 ) {
+    const isExternal = props.href.startsWith('http')
+    const imageContent = (
+        <Flex direction={'column'} h='100%' w='100%' alignItems='start'>
+            <Image
+                src={props.imageUrl}
+                alt={props.imageAlt}
+                w={'100%'}
+                borderRadius='full'
+            />
+            <Box flex={1} />
+        </Flex>
+    )
+    const imageLink = isExternal ? (
+        <Box
+            as='a'
+            href={props.href}
+            target='_blank'
+            rel='noopener noreferrer'
+            cursor='pointer'
+            display='inline-flex'
+        >
+            {imageContent}
+        </Box>
+    ) : (
+        <Box display='inline-flex' cursor='pointer'>
+            <NextLink href={props.href} style={{display: 'inherit'}}>
+                {imageContent}
+            </NextLink>
+        </Box>
+    )
     return (
         <Flex direction={'row'}>
             <AspectRatio ratio={1} flex={4} maxW='150px' >
-                <Clickable onClick={props.onImageClick}>
-                    <Flex direction={'column'} h='100%' w='100%' alignItems='start'>
-                        <Image
-                            src={props.imageUrl}
-                            alt={props.imageAlt}
-                            w={'100%'}
-                            borderRadius='full'
-                        />
-                        <Box flex={1} />
-                    </Flex>
-                </Clickable>
+                {imageLink}
             </AspectRatio>
             <Box flex={1} maxW='50px' />
             <Flex direction={'column'} flex={8}>

@@ -1,16 +1,20 @@
-import { Clickable } from 'presentation/common/Clickable'
-import { Image, Flex, Text, Box } from '@chakra-ui/react'
+import { Box, Image, Flex, Text } from '@chakra-ui/react'
 import { SocialTileData } from 'domain/model/SocialTileData'
 
 interface Props {
 	data: SocialTileData
-	onClick: () => void
+	href: string
 }
 
 export function SocialTile(props: Props) {
 	return (
-		<Clickable
-			onClick={ () => props.onClick() }
+		<Box
+			as='a'
+			href={props.href}
+			target='_blank'
+			rel='noopener noreferrer'
+			cursor='pointer'
+			display='inline-flex'
 			w='100%'
 		>
 			<Flex 
@@ -45,6 +49,6 @@ export function SocialTile(props: Props) {
 					</Text>
 				</Flex>
 			</Flex>
-		</Clickable>
+		</Box>
 	)
 }

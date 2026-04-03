@@ -1,6 +1,5 @@
 import {Image, Box, Flex, Spacer, Center, Text, HStack} from '@chakra-ui/react'
 import { NavBarButton } from './NavBarButton'
-import {openInCurrentTab} from "../../util/Window";
 import {NavBarProvider} from "../../../domain/provider/NavBarProvider";
 import { NavButtonData } from 'domain/model/NavButtonData';
 
@@ -24,7 +23,7 @@ export function NavBar(props: Props) {
                                 opacity={alpha}
                                 name={it.name}
                                 icon={it.icon}
-                                onClick={() => openInCurrentTab(it.url)}
+                                href={it.url}
                                 flex={1}
                             />
                         )
