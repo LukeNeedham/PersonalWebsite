@@ -1,7 +1,6 @@
 import {BlogArticle} from "../../../domain/model/BlogArticle";
 import {Flex, Text, VStack} from "@chakra-ui/react";
 import { BlogArticleListItem } from "./BlogArticleListItem";
-import {openInCurrentTab} from "../../util/Window";
 
 interface Props {
     articles: BlogArticle[]
@@ -15,7 +14,7 @@ export function BlogArticleList(props: Props) {
                     <BlogArticleListItem
                         key={it.title}
                         article={it}
-                        onClick={() => openInCurrentTab(`/blog/${it.id}`)}
+                        href={`/blog/${it.id}`}
                     />
                 )
             }

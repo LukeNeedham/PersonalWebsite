@@ -1,11 +1,10 @@
 import {BlogArticle} from "../../../domain/model/BlogArticle";
 import {Box, Text, Flex, Image, Center} from "@chakra-ui/react";
-import React from "react";
-import {Clickable} from "../../common/Clickable";
+import NextLink from 'next/link'
 
 interface Props {
     article: BlogArticle
-    onClick: () => void
+    href: string
 }
 
 export function BlogArticleListItem(props: Props) {
@@ -13,21 +12,23 @@ export function BlogArticleListItem(props: Props) {
     const imageSize = '180px'
 
     return (
-        <Clickable onClick={props.onClick} w={'full'}>
-            <Flex direction={'row'} background={'#ddd'} padding={'15px'} borderRadius={'10px'} w={'full'}>
-                <Center borderRadius={'10px'} background={'#000'} overflow={'hidden'}>
-                    <Image
-                        src={props.article.image}
-                        alt={''}
-                        h={imageSize}
-                        w={imageSize}
-                    />
-                </Center>
-                <Flex direction={'column'} paddingStart={{base: '15px', sm: '30px'}} paddingEnd={'10px'} flex={2} minW={'0px'}>
-                    <Text textStyle={'subTitle'}>{props.article.title}</Text>
-                    <Text textStyle={'body'} paddingTop={'20px'}>{date}</Text>
+        <Box display='inline-flex' w={'full'}>
+            <NextLink href={props.href} style={{display: 'inherit', width: '100%', cursor: 'pointer', textDecoration: 'none'}}>
+                <Flex direction={'row'} background={'#ddd'} padding={'15px'} borderRadius={'10px'} w={'full'}>
+                    <Center borderRadius={'10px'} background={'#000'} overflow={'hidden'}>
+                        <Image
+                            src={props.article.image}
+                            alt={''}
+                            h={imageSize}
+                            w={imageSize}
+                        />
+                    </Center>
+                    <Flex direction={'column'} paddingStart={{base: '15px', sm: '30px'}} paddingEnd={'10px'} flex={2} minW={'0px'}>
+                        <Text textStyle={'subTitle'}>{props.article.title}</Text>
+                        <Text textStyle={'body'} paddingTop={'20px'}>{date}</Text>
+                    </Flex>
                 </Flex>
-            </Flex>
-        </Clickable>
+            </NextLink>
+        </Box>
     )
 }

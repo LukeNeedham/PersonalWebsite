@@ -4,14 +4,13 @@ import { getAbsoluteSocialUrl } from 'domain/model/SocialTileData'
 import { SocialTile } from './SocialTile'
 import { RootScaffold } from 'presentation/common/RootScaffold'
 import { NavBarProvider } from 'domain/provider/NavBarProvider'
-import {openInNewTab} from "../../util/Window";
 
 
 export function SocialsPage() {
 	const tiles = SocialTileDataProvider.tiles.map((data) => {
 		return <SocialTile 
 			data={data} 
-			onClick={ () => openInNewTab(getAbsoluteSocialUrl(data)) } 
+			href={getAbsoluteSocialUrl(data)}
 			key={data.url}
 		/>
     })

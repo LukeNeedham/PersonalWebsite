@@ -1,12 +1,11 @@
 import { Box, Flex, Spacer, Center, Text, Image, Button } from '@chakra-ui/react'
-import { Clickable } from 'presentation/common/Clickable'
 import { ImageData } from 'domain/model/ImageData'
 
 interface Props {
 	title: string
 	description: string
 	image: ImageData
-	openProject: () => void
+	href: string
 }
 
 export function ProjectBrailliacSubsection(props: Props) {
@@ -18,7 +17,15 @@ export function ProjectBrailliacSubsection(props: Props) {
 				<Text textStyle='body'>{props.description}</Text>
 				<Box h='40px'/>
 	    		<Box flex={1}/>
-	    		<Clickable w='100%' onClick={props.openProject}>
+	    		<Box
+					as='a'
+					href={props.href}
+					target='_blank'
+					rel='noopener noreferrer'
+					cursor='pointer'
+					display='inline-flex'
+					w='100%'
+				>
 					<Text 
 						textStyle='body'
 						backgroundColor='#000' 
@@ -31,7 +38,7 @@ export function ProjectBrailliacSubsection(props: Props) {
 					>
 						Learn more
 					</Text>
-				</Clickable>
+				</Box>
 	    	</Flex>
 	    	<Box flex={1} />
 	    	<Box flex={1.5} >
