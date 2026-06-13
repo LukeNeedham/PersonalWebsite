@@ -33,7 +33,7 @@ const tileNetherlands: AboutTileData = {
 		alt: 'Me as a silhouette cycling my typically Dutch bike atop a typically Dutch dike, while the sun sets in the background',
 	},
 	title: 'I live in the Netherlands',
-	description: 'I moved after uni and quickly fell in love with the bikes and canals. I speak native English and conversational Dutch.',
+	description: 'I moved after uni and quickly fell in love with the bikes and canals. I speak native English and professional Dutch.',
 }
 
 const tileHobbies: AboutTileData = {
@@ -42,7 +42,7 @@ const tileHobbies: AboutTileData = {
 		alt: 'Me posing in front of a forest, valley, and mountain range while hiking in Switzerland on a beautiful sunny day',
 	},
 	title: 'I also have hobbies',
-	description: 'I like to dabble in design - including this very website. I also love language, music, bouldering, cycling, and hiking.',
+	description: 'When not working on my projects I love kickboxing, cycling, hiking, making music, and learning new languages.',
 }
 
 const tiles: Array<AboutTileData> = [
