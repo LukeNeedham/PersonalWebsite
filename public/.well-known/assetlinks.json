@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.lukeneedham.apphub",
+    "sha256_cert_fingerprints": ["8F:A2:30:33:62:EC:9E:5F:95:9C:B5:C7:1B:D6:0A:FE:08:00:F5:D9:01:67:19:7C:75:54:6D:28:79:2E:AC:AC"]
+  }
+}]
