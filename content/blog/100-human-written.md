@@ -30,13 +30,13 @@ But I can still find flow state when writing. The work feels important, knowing 
 
 There's a lot going on here. It makes me sad to see people devalue their actual lived human experience. I find it tragic to see people en-masse so willingly hand over agency to machines. I think its a shame people are missing the chance to share their real, felt emotions with the world. But I want to go further. When people expect me to read an AI generated text, I find it _disrespectful_.
 
-We all have limited time. We hate the feeling of our time being wasted, and I think this has become even more prevelent in the age of AI - so much to do, so many agents to check up on.
+We all have limited time. We hate the feeling of our time being wasted, and I think this has become even more prevalent in the age of AI - so much to do, so many agents to check up on.
 
 This is exactly why people use AI to write texts for them.
 
 But the reader of your AI text also has limited time. And forcing me to read a 50 line Slack message that Gemini wrote for you based on a one line prompt is disrespectful to my time. 
 
-When I see a clearly AI written blog post, I skip it. This is innocent enough - I don't need to read your blog, and you don't need my readership. No one loses. But when I am forced to sit in a meeting at work and listen to someone read off from AI written slides, that is disrespectful.
+When I see a clearly AI written blog post, I skip it. It doesn't bother me - I don't need to read your blog, and you don't need my readership. No one loses. And when you give a presentation full of love, even when it's obvious you had help from AI, I'm still unbothered. But when I am forced to sit in a meeting at work and listen to someone read off from AI written slides - slides they are reading _for the first time_ - that is disrespectful.
 
 I think the core of this issue is that in the past, in writing a text the author would have to have to spend _at least_ as much time as the reader would have to spend in reading - in fact usually many times longer. 
 
