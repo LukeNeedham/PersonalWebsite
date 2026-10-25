@@ -1,3 +1,5 @@
+'use client'
+
 import {Center, Flex, Text, VStack, Box} from "@chakra-ui/react";
 import {BlogArticleProvider} from "../../../../domain/provider/BlogArticleProvider";
 import { RootScaffold } from "presentation/common/RootScaffold";
@@ -6,6 +8,7 @@ import { BlogArticlePageContent } from "./BlogArticlePageContent";
 
 interface Props {
     articleId: string
+    content?: string
 }
 
 export function BlogArticlePage(props: Props) {
@@ -14,7 +17,7 @@ export function BlogArticlePage(props: Props) {
     const title = article?.title ?? "Article not found"
     const date = article?.publishDate?.format() ?? ""
     
-    const content = article === undefined ? null : <BlogArticlePageContent contentFile={article.contentFile} />
+    const content = props.content === undefined ? null : <BlogArticlePageContent content={props.content} />
     
     return (
         <RootScaffold selectedNavButton={NavBarProvider.blog}>

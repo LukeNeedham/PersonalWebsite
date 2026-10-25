@@ -1,5 +1,4 @@
 import {Center, Flex, Text, VStack, Box, ListItem, UnorderedList, Image} from "@chakra-ui/react"
-import {useEffect, useState} from "react"
 import Markdown, {Components} from 'react-markdown'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import {androidstudio} from 'react-syntax-highlighter/dist/esm/styles/hljs'
@@ -7,31 +6,10 @@ import ChakraUIRenderer from 'chakra-ui-markdown-renderer'
 import {Link} from "@chakra-ui/react"
 
 interface Props {
-    contentFile: string
+    content: string
 }
 
 export function BlogArticlePageContent(props: Props) {
-    const contentFile = props.contentFile
-
-    const errorContent = `# This article cannot be loaded \n Something went wrong loading the content for: ${contentFile}`
-
-    const [content, setContent] = useState('');
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const result = await fetch(contentFile)
-            const isSuccessful = result.ok
-            if (isSuccessful) {
-                const text = await result.text()
-                setContent(text)
-            } else {
-                setContent(errorContent)
-            }
-        }
-
-        fetchData()
-    }, [contentFile, errorContent])
-
     const customComponents: Components = {
         li(props) {
             return (
@@ -94,7 +72,7 @@ export function BlogArticlePageContent(props: Props) {
         <Markdown
             components={components}
         >
-            {content}
+            {props.content}
         </Markdown>
     )
 }
