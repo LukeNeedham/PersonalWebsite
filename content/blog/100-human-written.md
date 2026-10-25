@@ -12,7 +12,7 @@ If I told Gemini I ran a half-marathon, it might congratulate me on the achievem
 
 ## The Research
 
-I recently read this article: https://www.bbc.com/news/articles/c0kmpd6lr80o
+I recently read [this article](https://www.bbc.com/news/articles/c0kmpd6lr80o).
 
 It explains that most humans prefer to read novels written by other humans - not surprising. But only when they KNOW the book was written by a human. Give the same people a mix of unlabeled human- and LLM- written novels, and most people prefer the AI prose. What does this mean?
 
