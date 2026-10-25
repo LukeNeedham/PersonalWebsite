@@ -14,7 +14,7 @@ If I told Gemini I ran a half-marathon, it might congratulate me on the achievem
 
 I recently read [this article](https://www.bbc.com/news/articles/c0kmpd6lr80o).
 
-It explains that most humans prefer to read novels written by other humans - not surprising. But only when they KNOW the book was written by a human. Give the same people a mix of unlabeled human- and LLM- written novels, and most people prefer the AI prose. What does this mean?
+It explains that most humans prefer to read novels written by other humans - not surprising. But only when they _know_ the book was written by a human. Give the same people a mix of unlabeled human- and LLM- written novels, and most people prefer the AI prose. What does this mean?
 
 It means objectively the AI writes better. But that we give _less value_ to AI text. I'd hazard a guess that part of this value is related to what I feel here: that most people don't want to read stories about fictional people created by mashing up and remixing existing novels. They want to read about fictional people serving as a veneer for real people, with events based on actual lived experience from other humans.
 
