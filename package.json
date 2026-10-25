@@ -6,7 +6,10 @@
     "node": "24.x"
   },
   "scripts": {
+    "generate": "tsx scripts/build-blog.ts",
+    "predev": "tsx scripts/build-blog.ts",
     "dev": "next dev",
+    "prebuild": "tsx scripts/build-blog.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -22,15 +25,18 @@
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
     "framer-motion": "^6.5.1",
-    "highlight.js": "^11.12.0",
     "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.12.0",
     "rehype-highlight": "^7.0.2",
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
-    "typescript": "5.1.6",
+    "tsx": "^4.23.15",
     "unified": "^11.0.5"
   }
 }

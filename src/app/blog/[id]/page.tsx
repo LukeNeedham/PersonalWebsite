@@ -1,27 +1,23 @@
-import fs from "fs/promises"
-import path from "path"
 import { BlogArticlePage } from "presentation/feature/blog/article/BlogArticlePage"
 import { BlogArticleProvider } from "domain/provider/BlogArticleProvider"
-import { renderMarkdown } from "domain/provider/MarkdownRenderer"
+import blogHtml from "generated/blog-html.json"
 
 interface Props {
     params: { id: string }
 }
 
-// Only the known articles exist; everything is rendered to static HTML at build time.
+// Only the known articles exist; each is a static page (see `scripts/build-blog.ts`).
 export const dynamicParams = false
 
 export function generateStaticParams() {
     return BlogArticleProvider.articles.map(it => ({ id: it.id }))
 }
 
-async function readContentHtml(contentFile: string): Promise<string> {
-    const markdown = await fs.readFile(path.join(process.cwd(), "public", contentFile), "utf-8")
-    return renderMarkdown(markdown)
-}
-
-export default async function Page(props: Props) {
+export default function Page(props: Props) {
     const article = BlogArticleProvider.getArticle(props.params.id)
-    const contentHtml = article === undefined ? undefined : await readContentHtml(article.contentFile)
+    const contentHtml = (blogHtml as Record<string, string>)[props.params.id]
+    if (article !== undefined && contentHtml === undefined) {
+        throw new Error(`No generated HTML for article '${article.id}': is content/blog/${article.id}.md missing?`)
+    }
     return <BlogArticlePage articleId={props.params.id} contentHtml={contentHtml} />
 }

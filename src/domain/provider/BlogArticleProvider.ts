@@ -8,28 +8,24 @@ class BlogArticleProviderImpl {
             title: 'String Localisation in Kotlin',
             image: '/asset/image/blog/string-provider.png',
             publishDate: new LocalDate(23, 4, 2024),
-            contentFile: '/asset/blogcontent/string-provider.md',
         },
         videoDiary: {
             id: 'video-diary',
             title: 'Video Diary',
             image: '/asset/image/blog/video-diary.png',
             publishDate: new LocalDate(13, 2, 2025),
-            contentFile: '/asset/blogcontent/video-diary.md',
         },
         brailleByEar: {
             id: 'braille-by-ear',
             title: 'Braille by Ear',
             image: '/asset/image/blog/braille-by-ear.png',
             publishDate: new LocalDate(19, 10, 2025),
-            contentFile: '/asset/blogcontent/braille-by-ear.md',
         },
         junie: {
             id: 'junie',
             title: 'Junie AI',
             image: '/asset/image/blog/junie.png',
             publishDate: new LocalDate(3, 11, 2025),
-            contentFile: '/asset/blogcontent/junie.md',
         }
     }
 

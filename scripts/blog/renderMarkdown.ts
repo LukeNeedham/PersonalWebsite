@@ -10,7 +10,7 @@ const processor = unified()
     .use(rehypeHighlight)
     .use(rehypeStringify)
 
-/** Renders trusted (own, in-repo) markdown to an HTML string. Intended for build time. */
+/** Renders trusted (own, in-repo) markdown to an HTML string. */
 export async function renderMarkdown(markdown: string): Promise<string> {
     return String(await processor.process(markdown))
 }

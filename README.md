@@ -31,6 +31,19 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Blog articles
+
+Articles are markdown files in `content/blog` (the file name is the article id).
+To add one, add the markdown file and an entry in `BlogArticleProvider`.
+
+Build time and runtime code are kept separate:
+
+- `scripts/` is **build time only**. `scripts/build-blog.ts` renders the markdown to HTML and compiles the article styling to CSS (from the Chakra theme, so it never needs to be duplicated by hand), writing both to `src/generated` (git-ignored).
+  It runs automatically before `yarn dev` and `yarn build`, or manually with `yarn generate`.
+  Re-run it after editing a markdown file or the theme while `yarn dev` is running.
+- `src/` is the app. It only imports the generated HTML and CSS. It has no markdown, syntax-highlighting or filesystem code.
+- Each article is a statically generated page (`generateStaticParams` with `dynamicParams = false`), so it is served as a pre-built HTML file.
+
 # Credits
 
 This website uses the following icons from external sources:
