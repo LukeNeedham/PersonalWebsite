@@ -62,7 +62,7 @@ But I also expect we'll see growing pushback. I wouldn't be surprised to see the
 
 I expect we will conciously unconciously diverge from the way AI talks in an effort to establish our own culture, much like a teenager rebelling against the mainstream, with AI our uncool parents. We might end up in a cat-and-mouse situation, where AI trains on our new dialect in order to continue to disguise itself as human, forcing ever quicker cycles of linguistic invention and disposal.
 
-The problem is that many of the hallmarks of AI writing are simply hallmarks of _good writing_. LLMs like rules-of-3 so much because _we_ like rules-of-3 so much. Will an effort to differentiate human writing from AI involve the concious adoption of _worse_ writing technique and deliberately unclear style? Or will these changes end up being purely stylistic with no impact on comprehension?
+I find it personally frustrating that many of the hallmarks of AI writing are simply hallmarks of _good writing_. LLMs like rules-of-3 so much because _we_ like rules-of-3 so much. Will an effort to differentiate human writing from AI involve the concious adoption of _worse_ writing technique and deliberately unclear style? Or will these changes end up being purely stylistic with no impact on comprehension?
 
 This is all speculation. Perhaps next week Google will announce the first Gemini model that can feel real feelings and I'll be forced to retract this piece. Until then I'll keep on writing the old fashioned way.
 
