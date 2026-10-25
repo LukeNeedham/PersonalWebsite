@@ -40,7 +40,7 @@ When I see a clearly AI written blog post, I skip it. It doesn't bother me - I d
 
 I think the core of this issue is that in the past, in writing a text the author would have to have to spend _at least_ as much time as the reader would have to spend in reading - in fact usually many times longer. 
 
-With LLMs, this relationship has flipped. It is now possible for me to produce a 800 page novel in 30 seconds, and publish it online for you to spend 3 months reading. It used to be that, before I read anything, I knew that some real human effort had been expended in writing it. I knew that if a book was 800 pages long, it means someone spent years of their life writing because they were _passionate about what they were writing. Again, it could have been 800 pages of drivel, but at least I had the guarantee that someone cared enough to stick it out. 
+With LLMs, this relationship has flipped. It is now possible for me to produce a 800 page novel in 30 seconds, and publish it online for you to spend 3 months reading. It used to be that, before I read anything, I knew that some real human effort had been expended in writing it. I knew that if a book was 800 pages long, it means someone spent years of their life writing because they were _passionate_ about what they were writing. Again, it could have been 800 pages of drivel, but at least I had the guarantee that someone cared enough to stick it out. 
 
 No such guarantees anymore - in fact, when I come across a piece of text in the age of AI, there's a real possibility that I will be _the first human being to ever read it_. It's possible that not even the "author" has read it!
 
