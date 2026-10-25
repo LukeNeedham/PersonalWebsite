@@ -19,6 +19,9 @@
 }
 
 .content {
+    /* A flex column so vertical margins add up instead of collapsing, as in the rest of the app */
+    display: flex;
+    flex-direction: column;
     font-weight: 300;
     font-size: 14px;
 }
@@ -36,8 +39,8 @@
 }
 
 .content ul {
-    margin: 0 0 30px;
-    padding-left: 1.5em;
+    margin: 0 0 30px 1em;
+    padding: 0;
 }
 
 .content li {
@@ -48,7 +51,7 @@
     text-decoration: underline;
 }
 
-.content code {
+.content :not(pre) > code {
     background: #eee;
 }
 
@@ -58,10 +61,14 @@
     overflow: auto;
 }
 
-.content pre code {
-    display: block;
-    padding: 0.5em;
-    background: none;
+/* Colours and background come from the highlight.js theme.
+   The theme sets padding via `pre code.hljs`, so match its specificity or better. */
+.content pre code:global(.hljs) {
+    padding: 8px;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 @media (min-width: 480px) {

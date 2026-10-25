@@ -15,7 +15,8 @@ export function NavBar(props: Props) {
             <HStack w='100%' spacing={'10px'} background={'#000'}>
                 {
                     datas.map(it => {
-                        const isSelected = it == props.selectedNavButton
+                        // Compare by name: the prop is a copy when passed from a server component
+                        const isSelected = it.name === props.selectedNavButton.name
                         const alpha = isSelected ? 1 : 0.5
                         return (
                             <NavBarButton
