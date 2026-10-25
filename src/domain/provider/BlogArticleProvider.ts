@@ -26,7 +26,13 @@ class BlogArticleProviderImpl {
             title: 'Junie AI',
             image: '/asset/image/blog/junie.png',
             publishDate: new LocalDate(3, 11, 2025),
-        }
+        },
+        humanWritten: {
+            id: '100-human-written',
+            title: '100% Human Written',
+            image: '/asset/image/blog/100-human-written.jpg',
+            publishDate: new LocalDate(25, 10, 2026),
+        },
     }
 
     readonly articles: BlogArticle[] = Object.values(this.articlesMap).sort((a, b) => {
