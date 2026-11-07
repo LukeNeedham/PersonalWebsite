@@ -33,6 +33,12 @@ class BlogArticleProviderImpl {
             image: '/asset/image/blog/100-human-written.jpg',
             publishDate: new LocalDate(25, 10, 2026),
         },
+        appHub: {
+            id: 'apphub',
+            title: 'Vibe-coding an App Store',
+            image: '/asset/image/blog/apphub.png',
+            publishDate: new LocalDate(7, 11, 2026),
+        },
     }
 
     readonly articles: BlogArticle[] = Object.values(this.articlesMap).sort((a, b) => {
