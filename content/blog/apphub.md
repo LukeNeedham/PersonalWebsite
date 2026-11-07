@@ -27,10 +27,21 @@ So problem 2 is: For each app, I'm building too many features.
 
 ## The solution
 
-So what did I do? I built my own app store - this is my AppHub. It shows me:
+So what did I do? I built my own app store - this is my AppHub.
+
+<div class="video-side-by-side">
+<div class="video-portrait">
+<iframe src="https://www.youtube-nocookie.com/embed/tacUSWjrXRU" title="AppHub demo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="video-side-by-side-text">
+
+It shows me:
 - all the apps I'm building
 - all the features I'm working on 
 - all the app builds available (and which are up-to-date)
+
+</div>
+</div>
 
 It lets me easily switch between different versions of an app without ending up with 200 apk files in my Downloads folder every weekend. 
 

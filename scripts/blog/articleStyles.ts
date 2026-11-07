@@ -49,6 +49,30 @@ export const articleStyles: Record<string, Record<string, unknown>> = {
     '.blog-article-content :not(pre) > code': {
         background: '#eee',
     },
+    // Portrait video (e.g. a YouTube Short) beside text; stacks on small screens
+    '.blog-article-content .video-side-by-side': {
+        display: 'flex',
+        flexDirection: {base: 'column', md: 'row'},
+        alignItems: {base: 'center', md: 'flex-start'},
+        gap: '30px',
+        marginTop: '10px',
+        marginBottom: '10px',
+    },
+    '.blog-article-content .video-portrait': {
+        flexShrink: 0,
+        width: '100%',
+        maxWidth: '260px',
+        aspectRatio: '9 / 16',
+    },
+    '.blog-article-content .video-portrait iframe': {
+        width: '100%',
+        height: '100%',
+        border: 0,
+        borderRadius: '10px',
+    },
+    '.blog-article-content .video-side-by-side-text': {
+        flex: 1,
+    },
     '.blog-article-content pre': {
         borderRadius: '5px',
         overflow: 'auto',
