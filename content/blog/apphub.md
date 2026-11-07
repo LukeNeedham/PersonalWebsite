@@ -51,7 +51,7 @@ My workflow looks something like this:
 - Ask Claude to publish a release
 - Go back to sleep
 
-You'll notice my workflow involves a lot of app-jumping. The system task switcher is quite clunky for this, which inspired me to build Fan (you can see how I ended up with too many apps). Fan opens a little overlay with my recent apps - basically an Alt+Tab for my phone. You can read more about it here: https://github.com/LukeNeedham/Android-Dock
+You'll notice my workflow involves a lot of app-jumping. The system task switcher is quite clunky for this, which inspired me to build Fan (you can see how I ended up with too many apps). Fan opens a little overlay with my recent apps - basically an Alt+Tab for my phone. You can read more about it [here](https://github.com/LukeNeedham/Android-Dock)
 
 ## Behind the scenes
 
