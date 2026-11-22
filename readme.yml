@@ -1,0 +1,33 @@
+# The data of README.md: CI renders it (docs/readme.md in LukeNeedham/ci-workflows). Written by hand; never edit README.md.
+
+name: PersonalWebsite
+tagline: The personal website of Luke Needham.
+
+description: |
+  The source of [lukeneedham.com](https://lukeneedham.com): Luke Needham's personal website, with his projects and a blog.
+  It is a Next.js project using React, TypeScript and Chakra UI.
+
+links:
+  web: https://lukeneedham.com
+
+developer:
+  notes: |
+    ### Blog articles
+
+    Articles are markdown files in `content/blog` (the file name is the article id).
+    To add one, add the markdown file and an entry in `BlogArticleProvider`.
+
+    `scripts/` is **build time only**: `scripts/build-blog.ts` renders the markdown to HTML and compiles the article styling
+    to CSS (from the Chakra theme), writing both to `src/generated` (git-ignored). It runs before `yarn dev`, `yarn typecheck`
+    and `yarn build`, or manually with `yarn generate`; re-run it after editing a markdown file or the theme while `yarn dev`
+    is running. `src/` only imports the generated output. Each article is a statically generated page.
+
+sections:
+  - title: Credits
+    body: |
+      This website uses the following icons from external sources:
+
+      - Puzzle by Yoyon Pujiyono from [Noun Project](https://thenounproject.com/browse/icons/term/puzzle/) (CC BY 3.0)
+      - Sticky notes by Yoyon Pujiyono from [Noun Project](https://thenounproject.com/browse/icons/term/sticky-notes/) (CC BY 3.0)
+      - Decision making by Yoyon Pujiyono from [Noun Project](https://thenounproject.com/browse/icons/term/decision-making/) (CC BY 3.0)
+      - Project by Yoyon Pujiyono from [Noun Project](https://thenounproject.com/browse/icons/term/project/) (CC BY 3.0)
