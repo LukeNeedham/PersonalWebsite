@@ -1,0 +1,17 @@
+# Copied from LukeNeedham/ci-workflows (callers/next-js/web_pr.yml). Do not edit it here: change it there.
+name: On Pull Request
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+  deployments: read
+
+jobs:
+  web:
+    uses: LukeNeedham/ci-workflows/.github/workflows/web_pr.yml@main
+    secrets: inherit
