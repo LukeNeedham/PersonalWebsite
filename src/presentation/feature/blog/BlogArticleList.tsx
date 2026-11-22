@@ -1,23 +1,17 @@
-import {BlogArticle} from "../../../domain/model/BlogArticle";
-import {Flex, Text, VStack} from "@chakra-ui/react";
-import { BlogArticleListItem } from "./BlogArticleListItem";
+import { VStack } from '@chakra-ui/react'
+import { BlogArticleListItem } from '@/presentation/feature/blog/BlogArticleListItem'
+import type { BlogArticleItem } from '@/presentation/feature/blog/BlogUiState'
 
 interface Props {
-    articles: BlogArticle[]
+  articles: BlogArticleItem[]
 }
 
 export function BlogArticleList(props: Props) {
-    return (
-        <VStack spacing={'20px'} w={'full'}>
-            {
-                props.articles.map(it =>
-                    <BlogArticleListItem
-                        key={it.title}
-                        article={it}
-                        href={`/blog/${it.id}`}
-                    />
-                )
-            }
-        </VStack>
-    )
+  return (
+    <VStack gap={'20px'} w={'full'}>
+      {props.articles.map((it) => (
+        <BlogArticleListItem key={it.id} article={it} />
+      ))}
+    </VStack>
+  )
 }

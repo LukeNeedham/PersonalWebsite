@@ -1,18 +1,18 @@
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Providers } from "app/providers"
+import { Providers } from '@/app/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function RootLayout(
-  { children }: {children: React.ReactNode}
-) {
+export const metadata: Metadata = {
+  title: 'Luke Needham',
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <title>Luke Needham</title>
       <body className={inter.className}>
-        <Providers>
-            {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

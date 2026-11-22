@@ -1,27 +1,18 @@
-import {Box, Flex, Spacer, Center, Text, VStack} from '@chakra-ui/react'
-import {ProjectBrailliac} from './brailliac/ProjectBrailliac'
-import {RootScaffold} from 'presentation/common/RootScaffold';
-import {NavBarProvider} from 'domain/provider/NavBarProvider';
-import {ProjectPersonalWebsite} from './personalwebsite/ProjectPersonalWebsite';
-import {ProjectVideoDiary} from "./videodiary/ProjectVideoDiary";
+import { BlogArticleProvider } from '@/domain/provider/BlogArticleProvider'
+import { NavBarProvider } from '@/domain/provider/NavBarProvider'
+import { UrlProvider } from '@/domain/provider/UrlProvider'
+import { ProjectsPageContent } from '@/presentation/feature/projects/ProjectsPageContent'
+import type { ProjectsUiState } from '@/presentation/feature/projects/ProjectsUiState'
 
+/** Connects the projects page to the app: it reads what the page links to from the providers. No state, so no view model. */
 export function ProjectsPage() {
-
-	return (
-		<RootScaffold selectedNavButton={NavBarProvider.projects}>
-			<Flex direction={'column'}>
-				<Center>
-					<Text textStyle={'mainTitle'} textAlign='center'>
-						Projects I&apos;m proud of
-					</Text>
-				</Center>
-				<Box h='120px'/>
-				<ProjectBrailliac />
-				<Box h='150px'/>
-				<ProjectVideoDiary />
-				<Box h='100px'/>
-				<ProjectPersonalWebsite />
-			</Flex>
-		</RootScaffold>
-	)
+  const blogArticle = BlogArticleProvider.articlesMap.videoDiary
+  const uiState: ProjectsUiState = {
+    selectedNavButton: NavBarProvider.projects,
+    videoDiary: {
+      imageUrl: blogArticle.image,
+      href: UrlProvider.blogArticle(blogArticle.id),
+    },
+  }
+  return <ProjectsPageContent uiState={uiState} />
 }

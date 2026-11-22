@@ -1,8 +1,6 @@
-'use client'
+import { BlogPage } from '@/presentation/feature/blog/BlogPage'
 
-import React from "react";
-import {BlogPage} from "../../presentation/feature/blog/BlogPage";
-
+// A route file only renders the page of its feature: the page is in presentation/feature
 export default function Page() {
-    return <BlogPage />
+  return <BlogPage />
 }

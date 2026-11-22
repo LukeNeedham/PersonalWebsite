@@ -1,7 +1,7 @@
-import { ImageData } from 'domain/model/ImageData'
+import { ImageData } from '@/domain/model/ImageData'
 
 export interface AboutTileData {
-	image: ImageData
-	title: string
-	description: string
+  image: ImageData
+  title: string
+  description: string
 }

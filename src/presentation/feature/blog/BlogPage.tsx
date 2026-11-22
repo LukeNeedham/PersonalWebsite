@@ -1,23 +1,20 @@
-import {Box, Center, Flex, Text} from "@chakra-ui/react";
-import { NavBarProvider } from "domain/provider/NavBarProvider";
-import { RootScaffold } from "presentation/common/RootScaffold";
-import {BlogArticleProvider} from "../../../domain/provider/BlogArticleProvider";
-import {BlogArticleList} from "./BlogArticleList";
+import { BlogArticleProvider } from '@/domain/provider/BlogArticleProvider'
+import { NavBarProvider } from '@/domain/provider/NavBarProvider'
+import { UrlProvider } from '@/domain/provider/UrlProvider'
+import { BlogPageContent } from '@/presentation/feature/blog/BlogPageContent'
+import type { BlogUiState } from '@/presentation/feature/blog/BlogUiState'
 
+/** Connects the blog page to the app: it reads the articles from the provider and hands them down. No state, so no view model. */
 export function BlogPage() {
-    const articles = BlogArticleProvider.articles
-
-    return (
-        <RootScaffold selectedNavButton={NavBarProvider.blog}>
-            <Flex direction={'column'}>
-                <Center>
-                    <Text textStyle={'mainTitle'} textAlign='center'>
-                        My Blog
-                    </Text>
-                </Center>
-                <Box h='80px' />
-                <BlogArticleList articles={articles} />
-            </Flex>
-        </RootScaffold>
-    )
+  const uiState: BlogUiState = {
+    selectedNavButton: NavBarProvider.blog,
+    articles: BlogArticleProvider.articles.map((it) => ({
+      id: it.id,
+      title: it.title,
+      image: it.image,
+      date: it.publishDate.format(),
+      href: UrlProvider.blogArticle(it.id),
+    })),
+  }
+  return <BlogPageContent uiState={uiState} />
 }
