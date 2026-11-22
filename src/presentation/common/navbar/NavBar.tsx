@@ -1,36 +1,34 @@
-import {Image, Box, Flex, Spacer, Center, Text, HStack} from '@chakra-ui/react'
-import { NavBarButton } from './NavBarButton'
-import {NavBarProvider} from "../../../domain/provider/NavBarProvider";
-import { NavButtonData } from 'domain/model/NavButtonData';
+import { Box, Flex, HStack } from '@chakra-ui/react'
+import { NavBarButton } from '@/presentation/common/navbar/NavBarButton'
+import { NavBarProvider } from '@/domain/provider/NavBarProvider'
+import type { NavButtonData } from '@/domain/model/NavButtonData'
 
 interface Props {
-    selectedNavButton: NavButtonData,
+  selectedNavButton: NavButtonData
 }
 
 export function NavBar(props: Props) {
-    const datas = NavBarProvider.datas
-    return (
-        <Flex direction={'column'} w={'100%'}>
-            <Box h={'1px'} w={'100%'} background={'#fff'} />
-            <HStack w='100%' spacing={'10px'} background={'#000'}>
-                {
-                    datas.map(it => {
-                        // Compare by name: the prop is a copy when passed from a server component
-                        const isSelected = it.name === props.selectedNavButton.name
-                        const alpha = isSelected ? 1 : 0.5
-                        return (
-                            <NavBarButton
-                                key={it.name}
-                                opacity={alpha}
-                                name={it.name}
-                                icon={it.icon}
-                                href={it.url}
-                                flex={1}
-                            />
-                        )
-                    })
-                }
-            </HStack>
-        </Flex>
-    )
+  const datas = NavBarProvider.datas
+  return (
+    <Flex direction={'column'} w={'100%'}>
+      <Box h={'1px'} w={'100%'} background={'#fff'} />
+      <HStack w="100%" gap={'10px'} background={'#000'}>
+        {datas.map((it) => {
+          // Compare by name: the prop is a copy when passed from a server component
+          const isSelected = it.name === props.selectedNavButton.name
+          const alpha = isSelected ? 1 : 0.5
+          return (
+            <NavBarButton
+              key={it.name}
+              opacity={alpha}
+              name={it.name}
+              icon={it.icon}
+              href={it.url}
+              flex={1}
+            />
+          )
+        })}
+      </HStack>
+    </Flex>
+  )
 }

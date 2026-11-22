@@ -51,12 +51,12 @@ Never edit `src/generated/`. It is git-ignored build output.
 
 Dependencies must be installed (`yarn install --ignore-engines` if `node_modules` is missing and the local Node isn't 24).
 
-1. Run `npm run build`. It runs `scripts/build-blog.ts` first (markdown to HTML) and then `next build`.
+1. Run `yarn build`. It runs `scripts/build-blog.ts` first (markdown to HTML) and then `next build`.
    - The build fails with `No generated HTML for article '<id>'` if the provider id and the markdown file name differ.
    - `/blog/<id>` must be listed under `/blog/[id]` as a static (SSG) page.
 2. Confirm the HTML exists and has the content: `grep -c "<a distinctive phrase from the post>" .next/server/app/blog/<id>.html`.
-3. Run `npm run lint` and `npx tsc --noEmit`.
-4. Optional but recommended for a visual check: `npx next start -p <port>`, screenshot `/blog/<id>` and `/blog` with Playwright, and look at them. Kill the server afterwards.
+3. Run `yarn lint`, `yarn typecheck` and `yarn test` (what CI runs). `yarn format` fixes the formatting that `yarn lint` complains about.
+4. Optional but recommended for a visual check: `yarn next start -p <port>`, screenshot `/blog/<id>` and `/blog` with Playwright, and look at them. Kill the server afterwards.
 
 If the user is running `yarn dev`, tell them to run `yarn generate` once, since dev only generates the HTML at startup.
 

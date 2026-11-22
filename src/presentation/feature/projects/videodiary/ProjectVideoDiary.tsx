@@ -1,28 +1,28 @@
-import React from "react";
-import {Box, Flex, Spacer, Center, Text, Image, SimpleGrid, AspectRatio, VStack} from '@chakra-ui/react'
-import {ProjectHeader} from "../ProjectHeader"
-import {BlogArticleProvider} from "domain/provider/BlogArticleProvider";
-import {UrlProvider} from "domain/provider/UrlProvider";
+import { Text } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import { ProjectHeader } from '@/presentation/feature/projects/ProjectHeader'
 
-export function ProjectVideoDiary() {
-    const blogArticle = BlogArticleProvider.articlesMap.videoDiary
-    const blogArticleHref = UrlProvider.blogArticle(blogArticle.id)
-    return (
-        <ProjectHeader
-            imageUrl={blogArticle.image}
-            imageAlt='The logo of Video Diary'
-            href={blogArticleHref}
-            title={'Video Diary'}
-            description={
-            <Text textStyle='body'>
-                An Android app for anyone who&apos;s ever felt the urge to record snippets of their daily life.
-                Read all about it, including why I built it, in my{' '}
-                <NextLink href={blogArticleHref} style={{textDecoration: 'underline'}}>
-                    blog post
-                </NextLink>
-            </Text>
-            }
-        />
-    )
+interface Props {
+  imageUrl: string
+  href: string
+}
+
+export function ProjectVideoDiary({ imageUrl, href }: Props) {
+  return (
+    <ProjectHeader
+      imageUrl={imageUrl}
+      imageAlt="The logo of Video Diary"
+      href={href}
+      title={'Video Diary'}
+      description={
+        <Text textStyle="body">
+          An Android app for anyone who&apos;s ever felt the urge to record snippets of their daily
+          life. Read all about it, including why I built it, in my{' '}
+          <NextLink href={href} style={{ textDecoration: 'underline' }}>
+            blog post
+          </NextLink>
+        </Text>
+      }
+    />
+  )
 }

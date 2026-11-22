@@ -1,4 +1,4 @@
 export enum AboutTileDirection {
-	ImageStart,
-	ImageEnd
+  ImageStart,
+  ImageEnd,
 }

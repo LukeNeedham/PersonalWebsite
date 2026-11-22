@@ -1,14 +1,14 @@
-import { ImageData } from 'domain/model/ImageData'
+import { ImageData } from '@/domain/model/ImageData'
 
 export interface SocialTileData {
-	backgroundColor: string
-	foregroundColor: string
-	icon: ImageData
-	description: string
-	url: string
-	urlScheme: string
+  backgroundColor: string
+  foregroundColor: string
+  icon: ImageData
+  description: string
+  url: string
+  urlScheme: string
 }
 
 export function getAbsoluteSocialUrl(data: SocialTileData) {
-	return data.urlScheme + data.url
+  return data.urlScheme + data.url
 }

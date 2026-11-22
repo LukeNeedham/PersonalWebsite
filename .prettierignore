@@ -1,0 +1,12 @@
+.next
+node_modules
+yarn.lock
+src/generated
+next-env.d.ts
+# Kept in sync from ci-workflows: a reformat here would be reverted by the next sync
+.claude
+.github
+CLAUDE.md
+# Content, not code: the blog posts (they hold raw HTML) and the static files
+content
+public
