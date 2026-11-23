@@ -20,7 +20,7 @@ function compareNewestFirst(a: BlogArticle, b: BlogArticle): number {
   )
 }
 
-/** Every markdown file in `content/blog` is an article: there is no list to keep in step with them. */
+/** Every markdown file in `articles` of the content repo is an article: there is no list to keep in step with them. */
 const articles: BlogArticle[] = blogArticles
   .map((it) => ({
     id: it.id,
