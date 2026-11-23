@@ -1,84 +1,36 @@
 import { BlogArticle } from '@/domain/model/BlogArticle'
 import { LocalDate } from '@/domain/model/LocalDate'
+import blogArticles from '@/generated/blog-articles.json'
 
-const articlesMap = {
-  stringProvider: {
-    id: 'string-provider',
-    title: 'String Localisation in Kotlin',
-    image: '/asset/image/blog/string-provider.png',
-    publishDate: new LocalDate(23, 4, 2024),
-  },
-  videoDiary: {
-    id: 'video-diary',
-    title: 'Video Diary',
-    image: '/asset/image/blog/video-diary.png',
-    publishDate: new LocalDate(13, 2, 2025),
-  },
-  brailleByEar: {
-    id: 'braille-by-ear',
-    title: 'Braille by Ear',
-    image: '/asset/image/blog/braille-by-ear.png',
-    publishDate: new LocalDate(19, 10, 2025),
-  },
-  junie: {
-    id: 'junie',
-    title: 'Junie AI',
-    image: '/asset/image/blog/junie.png',
-    publishDate: new LocalDate(3, 11, 2025),
-  },
-  humanWritten: {
-    id: '100-human-written',
-    title: '100% Human Written',
-    image: '/asset/image/blog/100-human-written.jpg',
-    publishDate: new LocalDate(25, 10, 2026),
-  },
-  appHub: {
-    id: 'apphub',
-    title: 'Vibe-coding an App Store',
-    image: '/asset/image/blog/apphub.png',
-    publishDate: new LocalDate(7, 11, 2026),
-  },
+/** "2026-11-07", as `scripts/build-blog.ts` writes it from the front matter of the markdown file. */
+function parseDate(iso: string): LocalDate {
+  const [year, month, day] = iso.split('-').map(Number)
+  return new LocalDate(day, month, year)
 }
 
 /** Newest first; articles published on the same day are ordered by id, which is unique. */
 function compareNewestFirst(a: BlogArticle, b: BlogArticle): number {
   const dateA = a.publishDate
   const dateB = b.publishDate
-
-  function compare(componentA: number, componentB: number) {
-    if (componentA < componentB) {
-      return 1
-    } else if (componentA > componentB) {
-      return -1
-    } else {
-      return 0
-    }
-  }
-
-  // Sort by date
-  const compareYear = compare(dateA.year, dateB.year)
-  if (compareYear != 0) {
-    return compareYear
-  }
-
-  const compareMonth = compare(dateA.month, dateB.month)
-  if (compareMonth != 0) {
-    return compareMonth
-  }
-
-  const compareDay = compare(dateA.day, dateB.day)
-  if (compareDay != 0) {
-    return compareDay
-  }
-
-  // Tie-break identical dates by comparing ids (which are always unique)
-  return a.id.localeCompare(b.id)
+  return (
+    dateB.year - dateA.year ||
+    dateB.month - dateA.month ||
+    dateB.day - dateA.day ||
+    a.id.localeCompare(b.id)
+  )
 }
 
-const articles: BlogArticle[] = Object.values(articlesMap).sort(compareNewestFirst)
+/** Every markdown file in `content/blog` is an article: there is no list to keep in step with them. */
+const articles: BlogArticle[] = blogArticles
+  .map((it) => ({
+    id: it.id,
+    title: it.title,
+    image: it.image,
+    publishDate: parseDate(it.date),
+  }))
+  .sort(compareNewestFirst)
 
 export const BlogArticleProvider = {
-  articlesMap,
   articles,
   getArticle: (id: string): BlogArticle | undefined => articles.find((it) => it.id === id),
 }

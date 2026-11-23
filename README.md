@@ -7,8 +7,7 @@ The personal website of Luke Needham.
 
 ## Description
 
-The source of [lukeneedham.com](https://lukeneedham.com): Luke Needham's personal website, with his projects and a blog.
-It is a Next.js project using React, TypeScript and Chakra UI.
+My personal website, including an overview of my projects and my blog.
 
 ## Getting started as a developer
 
@@ -32,21 +31,28 @@ Like all my websites, it follows the shared architecture and conventions (Next.j
 
 ### Blog articles
 
-Articles are markdown files in `content/blog` (the file name is the article id).
-To add one, add the markdown file and an entry in `BlogArticleProvider`.
+Articles are markdown files in `content/blog` (the file name is the article id). To add one, add the file: there is no
+list to update. It opens with a front matter block, and the page shows the title and date itself, so they are not
+repeated in the text:
 
-`scripts/` is **build time only**: `scripts/build-blog.ts` renders the markdown to HTML and compiles the article styling
-to CSS (from the Chakra theme), writing both to `src/generated` (git-ignored). It runs before `yarn dev`, `yarn typecheck`
-and `yarn build`, or manually with `yarn generate`; re-run it after editing a markdown file or the theme while `yarn dev`
-is running. `src/` only imports the generated output. Each article is a statically generated page.
+```
+---
+title: Video Diary
+image: /asset/image/blog/video-diary.png
+date: 2025-02-13
+---
+The first paragraph has no heading, and `##` starts a section.
+```
+
+`scripts/` is **build time only**: `scripts/build-blog.ts` renders the markdown to HTML, lists the articles from their
+front matter and compiles the article styling to CSS (from the Chakra theme), writing both to `src/generated`
+(git-ignored). It runs before `yarn dev`, `yarn typecheck`, `yarn test` and `yarn build`, or manually with `yarn generate`;
+re-run it after editing a markdown file or the theme while `yarn dev` is running. `src/` only imports the generated output.
+Each article is a statically generated page.
 
 ## Credits
 
 See [CREDITS.md](CREDITS.md).
-
-## Contributing
-
-Branch from `main`, make the change, and open a pull request. CI must be green before it is merged.
 
 ## License
 

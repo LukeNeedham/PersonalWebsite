@@ -6,7 +6,12 @@ import type { ProjectsUiState } from '@/presentation/feature/projects/ProjectsUi
 
 /** Connects the projects page to the app: it reads what the page links to from the providers. No state, so no view model. */
 export function ProjectsPage() {
-  const blogArticle = BlogArticleProvider.articlesMap.videoDiary
+  const blogArticle = BlogArticleProvider.getArticle('video-diary')
+  if (blogArticle === undefined) {
+    throw new Error(
+      'The Projects page links to the video-diary article: is content/blog/video-diary.md missing?',
+    )
+  }
   const uiState: ProjectsUiState = {
     selectedNavButton: NavBarProvider.projects,
     videoDiary: {
