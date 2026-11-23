@@ -10,3 +10,5 @@ CLAUDE.md
 # Content, not code: the blog posts (they hold raw HTML) and the static files
 content
 public
+# The root README is generated from readme.yml, so it is not Prettier's to judge
+/README.md

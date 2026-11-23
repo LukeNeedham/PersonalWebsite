@@ -1,0 +1,30 @@
+# The data of README.md: CI renders it (docs/readme.md in LukeNeedham/ci-workflows). Written by hand; never edit README.md.
+
+name: PersonalWebsite
+tagline: The personal website of Luke Needham.
+
+description: |
+  My personal website, including an overview of my projects and my blog.
+
+developer:
+  notes: |
+    ### Blog articles
+
+    Articles are markdown files in `content/blog` (the file name is the article id). To add one, add the file: there is no
+    list to update. It opens with a front matter block, and the page shows the title and date itself, so they are not
+    repeated in the text:
+
+    ```
+    ---
+    title: Video Diary
+    image: /asset/image/blog/video-diary.png
+    date: 2025-02-13
+    ---
+    The first paragraph has no heading, and `##` starts a section.
+    ```
+
+    `scripts/` is **build time only**: `scripts/build-blog.ts` renders the markdown to HTML, lists the articles from their
+    front matter and compiles the article styling to CSS (from the Chakra theme), writing both to `src/generated`
+    (git-ignored). It runs before `yarn dev`, `yarn typecheck`, `yarn test` and `yarn build`, or manually with `yarn generate`;
+    re-run it after editing a markdown file or the theme while `yarn dev` is running. `src/` only imports the generated output.
+    Each article is a statically generated page.
