@@ -52,6 +52,11 @@ date: 2025-02-13
 The first paragraph has no heading, and `##` starts a section.
 ```
 
+The articles are edited in a browser with [Pages CMS](https://pagescms.org), a free, open-source editor
+([source](https://github.com/pages-cms/pages-cms), [docs](https://pagescms.org/docs/)) that reads and writes the content
+repo through its GitHub App. What the editor shows is set by `.pages.yml` in the content repo; every save is a commit to
+its `main`, which rebuilds this site.
+
 To work on the blog with a local checkout of the content instead of the download, set `BLOG_CONTENT_DIR` to it (and
 `BLOG_CONTENT_REF` to download another branch). With `yarn dev` already running, run `yarn generate` after changing
 an article. A push to `main` of the content repo rebuilds the site through a Vercel Deploy Hook.
