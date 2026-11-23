@@ -4,8 +4,7 @@ name: PersonalWebsite
 tagline: The personal website of Luke Needham.
 
 description: |
-  The source of [lukeneedham.com](https://lukeneedham.com): Luke Needham's personal website, with his projects and a blog.
-  It is a Next.js project using React, TypeScript and Chakra UI.
+  My personal website, including an overview of my projects and my blog.
 
 developer:
   notes: |
