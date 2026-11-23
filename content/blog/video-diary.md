@@ -1,3 +1,8 @@
+---
+title: Video Diary
+image: /asset/image/blog/video-diary.png
+date: 2025-02-13
+---
 Earlier this week I published my latest little ditty: Video Diary.
 
 You can download it right now on F-Droid: [f-droid.org/packages/com.lukeneedham.videodiary](https://f-droid.org/packages/com.lukeneedham.videodiary)

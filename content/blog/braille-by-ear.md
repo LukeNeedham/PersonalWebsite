@@ -1,3 +1,8 @@
+---
+title: Braille by Ear
+image: /asset/image/blog/braille-by-ear.png
+date: 2025-10-19
+---
 I just launched "Braille by Ear" for Android!
 [play.google.com/store/apps/details?id=com.brailliac.blindbraille](https://play.google.com/store/apps/details?id=com.brailliac.blindbraille)
 
