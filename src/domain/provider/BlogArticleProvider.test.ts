@@ -20,7 +20,7 @@ test('an article is found by its id, and an unknown id has none', () => {
 
 test('every markdown file is an article', async () => {
   const fs = await import('node:fs')
-  const files = fs.readdirSync('content/blog').filter((it) => it.endsWith('.md'))
+  const files = fs.readdirSync(`${process.env.BLOG_CONTENT_DIR || 'content'}/articles`).filter((it) => it.endsWith('.md'))
   const ids = BlogArticleProvider.articles.map((it) => it.id)
   expect([...ids].sort()).toEqual(files.map((it) => it.replace(/\.md$/, '')).sort())
 })

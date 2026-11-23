@@ -5,8 +5,9 @@ description: Add a new blog post to the personal website from markdown the user 
 
 # Add a blog post
 
-Blog posts are markdown files rendered to static HTML at build time (see "Blog articles" in `README.md`).
-Adding one means: a markdown file with front matter, a thumbnail, then verify, commit and open a PR.
+Blog posts are markdown files rendered to static HTML at build time (see "Blog articles" in `README.md`). They are **not in
+this repo**: they live in `LukeNeedham/personalwebsite-blogcontent` (`articles/` and `images/`). Adding one means: a markdown file
+with front matter and a thumbnail in that repo, then verify, commit and open a PR there.
 Do all of it; don't hand the user a checklist.
 
 ## 1. Gather what you need
@@ -24,30 +25,30 @@ Ask the user only for what is missing and can't be defaulted: usually the title 
 
 The id is a lowercase kebab-case slug of the title, e.g. `string-provider`.
 It is the markdown file name, the URL (`/blog/<id>`) and the thumbnail name.
-It must be unique: check `content/blog/`.
+It must be unique: check `articles/` of the content repo.
 
 ## 3. Add the files
 
-1. **Markdown**: write it to `content/blog/<id>.md`, opening with front matter:
+1. **Markdown**: write it to `articles/<id>.md` of the content repo, opening with front matter:
    ```
    ---
    title: My Post
-   image: /asset/image/blog/my-post.png
+   image: my-post.png
    date: 2026-10-25
    ---
    ```
-   `title`, `image` (the thumbnail, a path under `public`) and `date` (`YYYY-MM-DD`) are all required, and the build fails naming the file if one is missing. There is no list to register the article in: every file in `content/blog` is an article, and they are sorted by date automatically.
+   `title`, `image` (the thumbnail: a file name in `images/`) and `date` (`YYYY-MM-DD`) are all required, and the build fails naming the file if one is missing or the image does not exist. There is no list to register the article in: every file in `articles` is an article, and they are sorted by date automatically.
    - Do **not** repeat the title or date in the text after the front matter. The page renders them itself.
    - Existing posts open with an intro paragraph (no heading) and use `##` for sections. `#` and `##` render identically. Keep the user's content as written; only fix a leading `# Title` that duplicates the page title, and mention it if you do.
    - Code blocks need a language (` ```kotlin `) to be syntax highlighted.
-   - Any images the post uses go in `public/asset/image/blog/` and are referenced with absolute paths (`/asset/image/blog/<name>.png`).
-2. **Thumbnail**: save it as `public/asset/image/blog/<id>.png` (keep the user's format and extension if not png, and match it in `image`).
+   - Any images the post uses go in `images/` and are referenced as `../images/<name>.png`: only that form is rewritten.
+2. **Thumbnail**: save it as `images/<id>.png` (keep the user's format and extension if not png, and match it in `image`).
 
-Never edit `src/generated/`. It is git-ignored build output.
+Never edit `src/generated/` of the site. It is git-ignored build output.
 
 ## 4. Verify
 
-Dependencies must be installed (`yarn install --ignore-engines` if `node_modules` is missing and the local Node isn't 24).
+In this site's checkout, with the content repo checked out locally and `BLOG_CONTENT_DIR` set to it (the build downloads `main` otherwise). Dependencies must be installed (`yarn install --ignore-engines` if `node_modules` is missing and the local Node isn't 24).
 
 1. Run `yarn build`. It runs `scripts/build-blog.ts` first (markdown to HTML) and then `next build`.
    - The build fails, naming the file, if the front matter is missing or incomplete.
@@ -60,7 +61,7 @@ If the user is running `yarn dev`, tell them to run `yarn generate` once, since 
 
 ## 5. Commit and open a PR
 
-- Work on a feature branch (never push straight to `main`: it auto-deploys).
+- Work on a feature branch of the content repo (never push straight to `main`: it publishes the site).
 - Commit only the markdown, the thumbnail and any post images.
 - Push and open a PR. In the description, give the post title, id, date used, and note anything you changed in the markdown.
-- The Vercel preview of the PR shows the post; link it for the user once it is ready.
+- The content repo's check builds the articles with the site; once merged to `main`, the site is rebuilt automatically.

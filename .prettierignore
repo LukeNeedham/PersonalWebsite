@@ -12,3 +12,7 @@ content
 public
 # The root README is generated from readme.yml, so it is not Prettier's to judge
 /README.md
+
+# The downloaded blog content, and the images copied from it
+content
+public/blog-images
