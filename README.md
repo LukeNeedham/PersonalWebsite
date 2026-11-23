@@ -44,13 +44,23 @@ CI runs `lint`, `typecheck`, `test` and `build` on every pull request, and Verce
 
 ## Blog articles
 
-Articles are markdown files in `content/blog` (the file name is the article id).
-To add one, add the markdown file and an entry in `BlogArticleProvider`.
+Articles are markdown files in `content/blog` (the file name is the article id). To add one, add the file: there is no
+list to update. It opens with a front matter block, and the page shows the title and date itself, so they are not
+repeated in the text:
+
+```
+---
+title: Video Diary
+image: /asset/image/blog/video-diary.png
+date: 2025-02-13
+---
+The first paragraph has no heading, and `##` starts a section.
+```
 
 Build time and runtime code are kept separate:
 
-- `scripts/` is **build time only**. `scripts/build-blog.ts` renders the markdown to HTML and compiles the article styling to CSS (from the Chakra theme, so it never needs to be duplicated by hand), writing both to `src/generated` (git-ignored).
-  It runs automatically before `yarn dev`, `yarn typecheck` and `yarn build`, or manually with `yarn generate`.
+- `scripts/` is **build time only**. `scripts/build-blog.ts` renders the markdown to HTML, lists the articles from their front matter and compiles the article styling to CSS (from the Chakra theme, so it never needs to be duplicated by hand), writing both to `src/generated` (git-ignored).
+  It runs automatically before `yarn dev`, `yarn typecheck`, `yarn test` and `yarn build`, or manually with `yarn generate`.
   Re-run it after editing a markdown file or the theme while `yarn dev` is running.
 - `src/` is the app. It only imports the generated HTML and CSS. It has no markdown, syntax-highlighting or filesystem code.
 - Each article is a statically generated page (`generateStaticParams` with `dynamicParams = false`), so it is served as a pre-built HTML file.

@@ -1,3 +1,8 @@
+---
+title: String Localisation in Kotlin
+image: /asset/image/blog/string-provider.png
+date: 2024-04-23
+---
 When you think of localising strings in Android, you probably think of `strings.xml`.
 It works... but it can be better!
 

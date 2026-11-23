@@ -1,3 +1,8 @@
+---
+title: 100% Human Written
+image: /asset/image/blog/100-human-written.jpg
+date: 2026-10-25
+---
 Let me start by saying this: LLMs are fantastic writing tools. They work by predicting what word should come next, and they are exceptionally good at it. Objectively seen, they can write gooder than most humans, and in a fraction of the time.
 
 That said: I usually don't read for the prose. Beautiful prose is a nice bonus, but I actually read to get an insight into someone's head. Crucially - I want to read the author's thoughts *in their own voice*.

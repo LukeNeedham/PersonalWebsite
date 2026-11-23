@@ -16,6 +16,7 @@
     "format": "prettier --write .",
     "pretypecheck": "tsx scripts/build-blog.ts",
     "typecheck": "tsc --noEmit",
+    "pretest": "tsx scripts/build-blog.ts",
     "test": "vitest run"
   },
   "dependencies": {

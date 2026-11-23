@@ -18,9 +18,9 @@ test('an article is found by its id, and an unknown id has none', () => {
   expect(BlogArticleProvider.getArticle('nothing-here')).toBeUndefined()
 })
 
-test('every article has the markdown it is made from', async () => {
+test('every markdown file is an article', async () => {
   const fs = await import('node:fs')
-  for (const article of BlogArticleProvider.articles) {
-    expect(fs.existsSync(`content/blog/${article.id}.md`), article.id).toBe(true)
-  }
+  const files = fs.readdirSync('content/blog').filter((it) => it.endsWith('.md'))
+  const ids = BlogArticleProvider.articles.map((it) => it.id)
+  expect([...ids].sort()).toEqual(files.map((it) => it.replace(/\.md$/, '')).sort())
 })

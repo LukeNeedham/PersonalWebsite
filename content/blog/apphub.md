@@ -1,3 +1,8 @@
+---
+title: Vibe-coding an App Store
+image: /asset/image/blog/apphub.png
+date: 2026-11-07
+---
 What do you do when you vibe-code so many apps that you can't keep track of them anymore? You vibe-code your own app-store.
 
 _This post is 100% human-written. I have strong feelings about using AI for writing, [which you can read about here](https://www.lukeneedham.com/blog/100-human-written)_
