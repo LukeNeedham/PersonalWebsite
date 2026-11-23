@@ -44,10 +44,6 @@ is running. `src/` only imports the generated output. Each article is a statical
 
 See [CREDITS.md](CREDITS.md).
 
-## Contributing
-
-Branch from `main`, make the change, and open a pull request. CI must be green before it is merged.
-
 ## License
 
 All rights reserved. See [LICENSE](LICENSE).
