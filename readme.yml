@@ -7,9 +7,6 @@ description: |
   The source of [lukeneedham.com](https://lukeneedham.com): Luke Needham's personal website, with his projects and a blog.
   It is a Next.js project using React, TypeScript and Chakra UI.
 
-links:
-  web: https://lukeneedham.com
-
 developer:
   notes: |
     ### Blog articles
