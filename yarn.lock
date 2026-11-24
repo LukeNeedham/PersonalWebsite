@@ -4333,9 +4333,9 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-"next-js-blog@github:LukeNeedham/next-js-blog#v1.0.0":
-  version "1.0.0"
-  resolved "https://codeload.github.com/LukeNeedham/next-js-blog/tar.gz/2f8d1e26afe117bf93c5f52f924cae0d0254c327"
+"next-js-blog@github:LukeNeedham/next-js-blog#v1.1.0":
+  version "1.1.0"
+  resolved "https://codeload.github.com/LukeNeedham/next-js-blog/tar.gz/1f8065b554f01304b4958c01aad5d5bf55dbc45e"
   dependencies:
     rehype-highlight "^7.0.2"
     rehype-raw "^7.0.0"

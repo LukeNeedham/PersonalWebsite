@@ -31,6 +31,9 @@ developer:
     The first paragraph has no heading, and `##` starts a section.
     ```
 
+    Add `draft: true` to the front matter to keep an article out of the blog: it stays in the content repo, and the build
+    leaves it out (its fields are not checked). In Pages CMS this is the **Draft** checkbox.
+
     To work on the blog with a local checkout of the content instead of the download, set `BLOG_CONTENT_DIR` to it (and
     `BLOG_CONTENT_REF` to download another branch). With `yarn dev` already running, run `yarn generate` after changing
     an article. A push to `main` of the blog repo rebuilds the site through a Vercel Deploy Hook.
